@@ -3,9 +3,9 @@
 
 # 10 %: seed 0 2 4
 
-python experiments/stone/main.py --device cuda:1 --dataset SD --years 2019 --model_name stone --seed 0 --bs 1 --c 10 --ood 1 --tood 1 --new_node_ratio 0.1 &
-python experiments/stone/main.py --device cuda:2 --dataset SD --years 2019 --model_name stone --seed 2 --bs 1 --c 10 --ood 1 --tood 1 --new_node_ratio 0.1 &
-python experiments/stone/main.py --device cuda:3 --dataset SD --years 2019 --model_name stone --seed 4 --bs 1 --c 10 --ood 1 --tood 1 --new_node_ratio 0.1 &
+python experiments/stone/main.py --device cuda:1 --dataset SD --years 2019 --model_name stone --seed 0 --bs 64 --c 10 --ood 1 --tood 1 --new_node_ratio 0.1 &
+python experiments/stone/main.py --device cuda:2 --dataset SD --years 2019 --model_name stone --seed 2 --bs 64 --c 10 --ood 1 --tood 1 --new_node_ratio 0.1 &
+python experiments/stone/main.py --device cuda:3 --dataset SD --years 2019 --model_name stone --seed 4 --bs 64 --c 10 --ood 1 --tood 1 --new_node_ratio 0.1 &
 
 # 15 %: seed 5 6 7
 
