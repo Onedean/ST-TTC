@@ -1,0 +1,57 @@
+------------ Options -------------
+config: ./config/CA.conf
+cuda: 2
+seed: 1
+batch_size: 1
+max_epoch: 50
+learning_rate: 0.002
+weight_decay: 0.0001
+input_len: 12
+output_len: 12
+train_ratio: 0.6
+val_ratio: 0.2
+test_ratio: 0.2
+layers: 5
+tem_patchsize: 12
+tem_patchnum: 1
+factors: 8
+recur_times: 12
+spa_patchsize: 3
+spa_patchnum: 4096
+node_num: 8600
+tod: 96
+dow: 7
+input_dims: 64
+node_dims: 32
+tod_dims: 32
+dow_dims: 32
+traffic_file: ./data/CA/flowca.npz
+meta_file: ./data/CA/ca_meta.csv
+adj_file: ./data/CA/adj.npy
+model_file: ./cpt/ca_model
+log_file: ./log/ca_log
+-------------- End ----------------
+
+------------ Loading Data -------------
+Shape of data: (35040, 8600, 1)
+Shape of locations: (2, 8600)
+Shape of Train: (21001, 12, 8600, 1)
+Shape of Validation: (6985, 12, 8600, 1)
+Shape of Test: (6985, 12, 8600, 1)
+Mean: 237.14094929126668 & Std: 177.70410212891366
+------------ End -------------
+
+======================TEST MODE======================
+step 1, mae: 11.7332, rmse: 19.4722, mape: 0.0809
+step 2, mae: 13.4846, rmse: 22.7326, mape: 0.0953
+step 3, mae: 14.6862, rmse: 24.8237, mape: 0.1049
+step 4, mae: 15.6359, rmse: 26.4830, mape: 0.1112
+step 5, mae: 16.5644, rmse: 28.0354, mape: 0.1196
+step 6, mae: 17.4118, rmse: 29.4327, mape: 0.1286
+step 7, mae: 18.1711, rmse: 30.6914, mape: 0.1365
+step 8, mae: 18.8435, rmse: 31.9370, mape: 0.1395
+step 9, mae: 19.5250, rmse: 33.1197, mape: 0.1469
+step 10, mae: 20.1620, rmse: 34.2477, mape: 0.1522
+step 11, mae: 20.7475, rmse: 35.2733, mape: 0.1592
+step 12, mae: 21.2025, rmse: 36.1286, mape: 0.1598
+average, mae: 17.3501, rmse: 29.7891, mape: 0.1279

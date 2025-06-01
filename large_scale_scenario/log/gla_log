@@ -1,0 +1,57 @@
+------------ Options -------------
+config: ./config/GLA.conf
+cuda: 3
+seed: 1
+batch_size: 1
+max_epoch: 50
+learning_rate: 0.002
+weight_decay: 0.0001
+input_len: 12
+output_len: 12
+train_ratio: 0.6
+val_ratio: 0.2
+test_ratio: 0.2
+layers: 5
+tem_patchsize: 12
+tem_patchnum: 1
+factors: 32
+recur_times: 11
+spa_patchsize: 2
+spa_patchnum: 2048
+node_num: 3834
+tod: 96
+dow: 7
+input_dims: 64
+node_dims: 32
+tod_dims: 32
+dow_dims: 32
+traffic_file: ./data/GLA/flowgla.npz
+meta_file: ./data/GLA/gla_meta.csv
+adj_file: ./data/GLA/adj.npy
+model_file: ./cpt/gla_model
+log_file: ./log/gla_log
+-------------- End ----------------
+
+------------ Loading Data -------------
+Shape of data: (35040, 3834, 1)
+Shape of locations: (2, 3834)
+Shape of Train: (21001, 12, 3834, 1)
+Shape of Validation: (6985, 12, 3834, 1)
+Shape of Test: (6985, 12, 3834, 1)
+Mean: 277.2389959047251 & Std: 188.27605390495626
+------------ End -------------
+
+======================TEST MODE======================
+step 1, mae: 12.4855, rmse: 20.2947, mape: 0.0725
+step 2, mae: 14.4720, rmse: 23.9170, mape: 0.0832
+step 3, mae: 15.8438, rmse: 26.3363, mape: 0.0927
+step 4, mae: 17.0089, rmse: 28.3325, mape: 0.1011
+step 5, mae: 18.0905, rmse: 30.1763, mape: 0.1079
+step 6, mae: 19.0568, rmse: 31.8513, mape: 0.1130
+step 7, mae: 19.9733, rmse: 33.5272, mape: 0.1191
+step 8, mae: 20.8043, rmse: 35.0423, mape: 0.1274
+step 9, mae: 21.5399, rmse: 36.3667, mape: 0.1338
+step 10, mae: 22.1614, rmse: 37.4631, mape: 0.1356
+step 11, mae: 22.7329, rmse: 38.5432, mape: 0.1401
+step 12, mae: 23.3172, rmse: 39.6399, mape: 0.1460
+average, mae: 18.9560, rmse: 32.3258, mape: 0.1144

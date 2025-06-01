@@ -1,0 +1,57 @@
+------------ Options -------------
+config: ./config/GBA.conf
+cuda: 0
+seed: 1
+batch_size: 1
+max_epoch: 50
+learning_rate: 0.002
+weight_decay: 0.0001
+input_len: 12
+output_len: 12
+train_ratio: 0.6
+val_ratio: 0.2
+test_ratio: 0.2
+layers: 5
+tem_patchsize: 12
+tem_patchnum: 1
+factors: 128
+recur_times: 11
+spa_patchsize: 2
+spa_patchnum: 2048
+node_num: 2352
+tod: 96
+dow: 7
+input_dims: 128
+node_dims: 32
+tod_dims: 32
+dow_dims: 32
+traffic_file: ./data/GBA/flowgba.npz
+meta_file: ./data/GBA/gba_meta.csv
+adj_file: ./data/GBA/adj.npy
+model_file: ./cpt/gba_model
+log_file: ./log/gba_log
+-------------- End ----------------
+
+------------ Loading Data -------------
+Shape of data: (35040, 2352, 1)
+Shape of locations: (2, 2352)
+Shape of Train: (21001, 12, 2352, 1)
+Shape of Validation: (6985, 12, 2352, 1)
+Shape of Test: (6985, 12, 2352, 1)
+Mean: 238.5313055056713 & Std: 166.68980630348025
+------------ End -------------
+
+======================TEST MODE======================
+step 1, mae: 13.2980, rmse: 22.3617, mape: 0.0939
+step 2, mae: 15.3538, rmse: 26.2643, mape: 0.1097
+step 3, mae: 16.8093, rmse: 28.7119, mape: 0.1225
+step 4, mae: 17.8577, rmse: 30.3001, mape: 0.1293
+step 5, mae: 18.8528, rmse: 31.8145, mape: 0.1373
+step 6, mae: 19.6785, rmse: 33.0900, mape: 0.1451
+step 7, mae: 20.4226, rmse: 34.2273, mape: 0.1516
+step 8, mae: 21.1394, rmse: 35.3329, mape: 0.1585
+step 9, mae: 21.8042, rmse: 36.4572, mape: 0.1655
+step 10, mae: 22.3736, rmse: 37.3850, mape: 0.1737
+step 11, mae: 22.9299, rmse: 38.3617, mape: 0.1802
+step 12, mae: 23.4926, rmse: 39.2325, mape: 0.1893
+average, mae: 19.5013, rmse: 33.1626, mape: 0.1464

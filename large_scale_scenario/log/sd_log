@@ -1,0 +1,57 @@
+------------ Options -------------
+config: ./config/SD.conf
+cuda: 0
+seed: 1
+batch_size: 1
+max_epoch: 50
+learning_rate: 0.002
+weight_decay: 0.0001
+input_len: 12
+output_len: 12
+train_ratio: 0.6
+val_ratio: 0.2
+test_ratio: 0.2
+layers: 5
+tem_patchsize: 12
+tem_patchnum: 1
+factors: 32
+recur_times: 9
+spa_patchsize: 2
+spa_patchnum: 512
+node_num: 716
+tod: 96
+dow: 7
+input_dims: 64
+node_dims: 64
+tod_dims: 32
+dow_dims: 32
+traffic_file: ./data/SD/flowsd.npz
+meta_file: ./data/SD/sd_meta.csv
+adj_file: ./data/SD/adj.npy
+model_file: ./cpt/sd_model
+log_file: ./log/sd_log
+-------------- End ----------------
+
+------------ Loading Data -------------
+Shape of data: (35040, 716, 1)
+Shape of locations: (2, 716)
+Shape of Train: (21001, 12, 716, 1)
+Shape of Validation: (6985, 12, 716, 1)
+Shape of Test: (6985, 12, 716, 1)
+Mean: 247.28200918338817 & Std: 184.31693666456243
+------------ End -------------
+
+======================TEST MODE======================
+step 1, mae: 11.7956, rmse: 18.9601, mape: 0.0743
+step 2, mae: 13.3776, rmse: 22.1793, mape: 0.0840
+step 3, mae: 14.5296, rmse: 24.3359, mape: 0.0922
+step 4, mae: 15.3589, rmse: 25.9044, mape: 0.0978
+step 5, mae: 16.1440, rmse: 27.2660, mape: 0.1049
+step 6, mae: 16.8632, rmse: 28.6288, mape: 0.1111
+step 7, mae: 17.5399, rmse: 29.9211, mape: 0.1166
+step 8, mae: 18.2246, rmse: 31.2803, mape: 0.1218
+step 9, mae: 18.8513, rmse: 32.5133, mape: 0.1274
+step 10, mae: 19.4866, rmse: 33.7681, mape: 0.1322
+step 11, mae: 20.0069, rmse: 34.9031, mape: 0.1383
+step 12, mae: 20.6627, rmse: 36.2724, mape: 0.1472
+average, mae: 16.9033, rmse: 29.2727, mape: 0.1123

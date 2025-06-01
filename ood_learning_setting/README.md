@@ -1,4 +1,4 @@
-# Spatio-temporal OOD Learning Scenario
+# Spatio-temporal OOD Learning Setting
 
 _In this sub-scenario, we use and adapt the [code repository](https://github.com/PoorOtterBob/STONE-KDD-2024) of the **STONE** model._
 
