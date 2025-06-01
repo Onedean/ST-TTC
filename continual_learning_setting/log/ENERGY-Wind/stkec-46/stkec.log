@@ -1,0 +1,217 @@
+2024-09-29 18:40:24,932 - logger name:log/ENERGY-Wind/stkec-46/stkec.log
+2024-09-29 18:40:24,932 - params : {'conf': 'new_conf/ENERGY-Wind/stkec.json', 'seed': 46, 'paral': 0, 'gpuid': 1, 'logname': 'stkec', 'method': 'STKEC', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS3/trafficStream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=1), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>}, 'begin_year': 0, 'end_year': 3, 'dropout': 0.0, 'lr': 0.01, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'influe_length': 168, 'data_process': 0, 'batch_influ_size': 4, 'beita': 1, 'cluster': 24, 'raw_data_path': 'data/ENERGY-Wind/RawData/', 'save_data_path': 'data/ENERGY-Wind/FastData/', 'graph_path': 'data/ENERGY-Wind/graph/', 'model_path': 'log/ENERGY-Wind/', 'influence_path': "Pleaseenter'outdir'inyourpath", 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': True, 'train': 1, 'auto_test': 0, 'strategy': 'incremental', 'increase': True, 'num_hops': 2, 'detect': True, 'detect_strategy': 'feature', 'detect_infl_strategy': True, 'infl_topk': 10, 'adp_adj': False, 'skip_dim': 64, 'end_dim': 64, 'hidden_channels': 32, 'dilation_channels': 64, 'residual_channels': 64, 'input_dim': 1, 'output_dim': 1, 'ewc': True, 'ewc_strategy': 'ewc', 'ewc_lambda': 0.0005, 'replay': True, 'replay_strategy': 'random', 'repaly_num_samples': 100, 'path': 'log/ENERGY-Wind/stkec-46', 'logger': <Logger utils.initialize (INFO)>}
+2024-09-29 18:40:24,936 - [*] Year 0 load from data/ENERGY-Wind/FastData/0.npz
+2024-09-29 18:40:25,216 - [*] Year 0 Dataset load!
+2024-09-29 18:40:25,243 - [*] Year 0 Training start
+2024-09-29 18:40:25,837 - node number torch.Size([13184, 12])
+2024-09-29 18:40:27,891 - epoch:0, training loss:316.8019 validation loss:2.6533
+2024-09-29 18:40:29,909 - epoch:1, training loss:6.5288 validation loss:3.5826
+2024-09-29 18:40:32,028 - epoch:2, training loss:3.4646 validation loss:3.4123
+2024-09-29 18:40:34,153 - epoch:3, training loss:2.8091 validation loss:3.5008
+2024-09-29 18:40:36,224 - epoch:4, training loss:2.6078 validation loss:3.5147
+2024-09-29 18:40:38,344 - epoch:5, training loss:2.5447 validation loss:3.3786
+2024-09-29 18:40:40,420 - epoch:6, training loss:2.5273 validation loss:3.1429
+2024-09-29 18:40:41,434 - [*] loss:28.7909
+2024-09-29 18:40:41,439 - [*] year 0, testing
+2024-09-29 18:40:41,477 - T:3	MAE	3.7778	RMSE	4.5232	MAPE	10.1166
+2024-09-29 18:40:41,584 - T:6	MAE	3.6279	RMSE	4.2800	MAPE	9.7096
+2024-09-29 18:40:41,957 - T:12	MAE	4.6899	RMSE	5.4015	MAPE	12.3614
+2024-09-29 18:40:41,958 - T:Avg	MAE	3.9671	RMSE	4.6390	MAPE	10.5683
+2024-09-29 18:40:41,958 - Finished optimization, total time:10.54 s, best model:log/ENERGY-Wind/stkec-46/0/2.6533.pkl
+2024-09-29 18:40:41,964 - [*] Year 1 load from data/ENERGY-Wind/FastData/1.npz
+2024-09-29 18:40:41,966 - [*] load from log/ENERGY-Wind/stkec-46/0/2.6533.pkl
+2024-09-29 18:40:42,018 - [*] detect strategy feature
+2024-09-29 18:40:43,614 - number of increase nodes:29, nodes after 2 hop:torch.Size([98]), total nodes this year 113
+2024-09-29 18:40:43,800 - [*] Year 1 Dataset load!
+2024-09-29 18:40:43,800 - [*] load from log/ENERGY-Wind/stkec-46/0/2.6533.pkl
+2024-09-29 18:40:43,848 - [*] EWC! lambda 0.000500
+2024-09-29 18:40:45,126 - [*] Year 1 Training start
+2024-09-29 18:40:46,078 - node number torch.Size([12544, 12])
+2024-09-29 18:40:49,454 - epoch:0, training loss:18.7038 validation loss:2.0281
+2024-09-29 18:40:53,238 - epoch:1, training loss:3.2968 validation loss:1.1013
+2024-09-29 18:40:56,880 - epoch:2, training loss:2.4567 validation loss:1.0709
+2024-09-29 18:41:00,520 - epoch:3, training loss:2.3403 validation loss:1.2138
+2024-09-29 18:41:04,167 - epoch:4, training loss:2.2913 validation loss:0.9903
+2024-09-29 18:41:07,837 - epoch:5, training loss:2.2507 validation loss:1.1123
+2024-09-29 18:41:11,451 - epoch:6, training loss:2.2038 validation loss:1.3809
+2024-09-29 18:41:15,157 - epoch:7, training loss:2.2189 validation loss:0.9838
+2024-09-29 18:41:18,761 - epoch:8, training loss:2.1448 validation loss:0.9574
+2024-09-29 18:41:22,378 - epoch:9, training loss:2.1251 validation loss:1.1067
+2024-09-29 18:41:25,970 - epoch:10, training loss:2.1306 validation loss:0.9651
+2024-09-29 18:41:29,573 - epoch:11, training loss:2.0998 validation loss:1.0590
+2024-09-29 18:41:33,249 - epoch:12, training loss:2.0353 validation loss:1.0992
+2024-09-29 18:41:36,880 - epoch:13, training loss:2.0713 validation loss:0.9492
+2024-09-29 18:41:40,520 - epoch:14, training loss:2.1444 validation loss:1.0113
+2024-09-29 18:41:44,110 - epoch:15, training loss:2.0009 validation loss:0.9793
+2024-09-29 18:41:47,873 - epoch:16, training loss:2.0962 validation loss:1.0712
+2024-09-29 18:41:51,624 - epoch:17, training loss:1.9991 validation loss:0.9568
+2024-09-29 18:41:55,258 - epoch:18, training loss:1.9806 validation loss:0.9463
+2024-09-29 18:41:58,874 - epoch:19, training loss:2.0599 validation loss:1.2024
+2024-09-29 18:42:02,559 - epoch:20, training loss:1.9825 validation loss:0.9422
+2024-09-29 18:42:06,174 - epoch:21, training loss:2.0819 validation loss:0.9607
+2024-09-29 18:42:09,891 - epoch:22, training loss:1.9441 validation loss:1.1723
+2024-09-29 18:42:13,495 - epoch:23, training loss:1.9911 validation loss:1.1116
+2024-09-29 18:42:17,108 - epoch:24, training loss:1.9772 validation loss:1.2897
+2024-09-29 18:42:20,779 - epoch:25, training loss:2.0555 validation loss:1.8622
+2024-09-29 18:42:24,341 - epoch:26, training loss:2.1038 validation loss:0.9393
+2024-09-29 18:42:27,922 - epoch:27, training loss:1.9808 validation loss:1.1098
+2024-09-29 18:42:31,480 - epoch:28, training loss:2.0110 validation loss:0.8970
+2024-09-29 18:42:35,056 - epoch:29, training loss:2.2066 validation loss:1.2060
+2024-09-29 18:42:38,589 - epoch:30, training loss:2.0336 validation loss:1.0483
+2024-09-29 18:42:42,277 - epoch:31, training loss:1.9755 validation loss:1.0529
+2024-09-29 18:42:45,896 - epoch:32, training loss:2.0744 validation loss:0.9392
+2024-09-29 18:42:49,532 - epoch:33, training loss:2.1033 validation loss:1.0206
+2024-09-29 18:42:53,062 - epoch:34, training loss:2.1454 validation loss:1.0065
+2024-09-29 18:42:54,290 - [*] loss:4.5134
+2024-09-29 18:42:54,334 - [*] year 1, testing
+2024-09-29 18:42:54,371 - T:3	MAE	1.6437	RMSE	1.7936	MAPE	4.5541
+2024-09-29 18:42:54,443 - T:6	MAE	1.7116	RMSE	1.9115	MAPE	4.7665
+2024-09-29 18:42:54,990 - T:12	MAE	1.8215	RMSE	2.1332	MAPE	5.1171
+2024-09-29 18:42:54,990 - T:Avg	MAE	1.7145	RMSE	1.9257	MAPE	4.7787
+2024-09-29 18:42:54,990 - Finished optimization, total time:87.37 s, best model:log/ENERGY-Wind/stkec-46/1/0.897.pkl
+2024-09-29 18:42:55,000 - [*] Year 2 load from data/ENERGY-Wind/FastData/2.npz
+2024-09-29 18:42:55,002 - [*] load from log/ENERGY-Wind/stkec-46/1/0.897.pkl
+2024-09-29 18:42:55,054 - [*] detect strategy feature
+2024-09-29 18:42:56,995 - number of increase nodes:27, nodes after 2 hop:torch.Size([118]), total nodes this year 122
+2024-09-29 18:42:57,166 - [*] Year 2 Dataset load!
+2024-09-29 18:42:57,166 - [*] load from log/ENERGY-Wind/stkec-46/1/0.897.pkl
+2024-09-29 18:42:57,217 - [*] EWC! lambda 0.000500
+2024-09-29 18:42:58,720 - [*] Year 2 Training start
+2024-09-29 18:42:59,628 - node number torch.Size([15104, 12])
+2024-09-29 18:43:02,715 - epoch:0, training loss:10.1655 validation loss:8.2820
+2024-09-29 18:43:06,559 - epoch:1, training loss:2.2731 validation loss:8.3750
+2024-09-29 18:43:10,366 - epoch:2, training loss:2.0388 validation loss:8.1063
+2024-09-29 18:43:14,310 - epoch:3, training loss:1.9351 validation loss:7.9527
+2024-09-29 18:43:18,161 - epoch:4, training loss:1.9022 validation loss:8.0650
+2024-09-29 18:43:22,038 - epoch:5, training loss:1.8895 validation loss:7.8014
+2024-09-29 18:43:25,927 - epoch:6, training loss:1.9185 validation loss:7.6146
+2024-09-29 18:43:29,764 - epoch:7, training loss:1.9067 validation loss:7.9744
+2024-09-29 18:43:33,698 - epoch:8, training loss:1.8496 validation loss:7.9027
+2024-09-29 18:43:37,585 - epoch:9, training loss:1.8668 validation loss:7.5182
+2024-09-29 18:43:41,560 - epoch:10, training loss:1.9052 validation loss:8.1609
+2024-09-29 18:43:45,469 - epoch:11, training loss:1.9248 validation loss:8.0902
+2024-09-29 18:43:49,312 - epoch:12, training loss:1.9046 validation loss:8.3316
+2024-09-29 18:43:53,222 - epoch:13, training loss:1.8880 validation loss:7.7557
+2024-09-29 18:43:57,083 - epoch:14, training loss:1.9374 validation loss:7.4999
+2024-09-29 18:44:01,118 - epoch:15, training loss:1.9791 validation loss:8.1462
+2024-09-29 18:44:05,071 - epoch:16, training loss:2.1634 validation loss:9.2937
+2024-09-29 18:44:08,804 - epoch:17, training loss:2.1739 validation loss:8.5098
+2024-09-29 18:44:12,689 - epoch:18, training loss:2.0092 validation loss:8.9289
+2024-09-29 18:44:16,542 - epoch:19, training loss:2.0171 validation loss:7.6156
+2024-09-29 18:44:20,419 - epoch:20, training loss:2.0243 validation loss:7.8988
+2024-09-29 18:44:21,620 - [*] loss:56.9679
+2024-09-29 18:44:21,628 - [*] year 2, testing
+2024-09-29 18:44:21,670 - T:3	MAE	7.4649	RMSE	7.5221	MAPE	33.2658
+2024-09-29 18:44:21,750 - T:6	MAE	7.4772	RMSE	7.5546	MAPE	33.3841
+2024-09-29 18:44:22,781 - T:12	MAE	7.4291	RMSE	7.5615	MAPE	33.3017
+2024-09-29 18:44:22,782 - T:Avg	MAE	7.4600	RMSE	7.5444	MAPE	33.3194
+2024-09-29 18:44:22,782 - Finished optimization, total time:56.01 s, best model:log/ENERGY-Wind/stkec-46/2/7.4999.pkl
+2024-09-29 18:44:22,799 - [*] Year 3 load from data/ENERGY-Wind/FastData/3.npz
+2024-09-29 18:44:22,800 - [*] load from log/ENERGY-Wind/stkec-46/2/7.4999.pkl
+2024-09-29 18:44:22,851 - [*] detect strategy feature
+2024-09-29 18:44:24,833 - number of increase nodes:31, nodes after 2 hop:torch.Size([110]), total nodes this year 134
+2024-09-29 18:44:25,033 - [*] Year 3 Dataset load!
+2024-09-29 18:44:25,033 - [*] load from log/ENERGY-Wind/stkec-46/2/7.4999.pkl
+2024-09-29 18:44:25,072 - [*] EWC! lambda 0.000500
+2024-09-29 18:44:26,814 - [*] Year 3 Training start
+2024-09-29 18:44:27,787 - node number torch.Size([14080, 12])
+2024-09-29 18:44:30,831 - epoch:0, training loss:22.0476 validation loss:6.6572
+2024-09-29 18:44:34,681 - epoch:1, training loss:4.1149 validation loss:6.6046
+2024-09-29 18:44:38,502 - epoch:2, training loss:3.3019 validation loss:6.6139
+2024-09-29 18:44:42,397 - epoch:3, training loss:3.1146 validation loss:6.5536
+2024-09-29 18:44:46,248 - epoch:4, training loss:3.0112 validation loss:6.6128
+2024-09-29 18:44:50,147 - epoch:5, training loss:2.8637 validation loss:6.6974
+2024-09-29 18:44:53,952 - epoch:6, training loss:2.7485 validation loss:6.6266
+2024-09-29 18:44:57,731 - epoch:7, training loss:2.6361 validation loss:6.2141
+2024-09-29 18:45:01,551 - epoch:8, training loss:2.5401 validation loss:6.3248
+2024-09-29 18:45:05,409 - epoch:9, training loss:2.4196 validation loss:6.5184
+2024-09-29 18:45:09,230 - epoch:10, training loss:2.3646 validation loss:6.8404
+2024-09-29 18:45:13,067 - epoch:11, training loss:2.4060 validation loss:6.1102
+2024-09-29 18:45:16,913 - epoch:12, training loss:2.3336 validation loss:6.8096
+2024-09-29 18:45:20,700 - epoch:13, training loss:2.3720 validation loss:6.4655
+2024-09-29 18:45:24,552 - epoch:14, training loss:2.3694 validation loss:6.3098
+2024-09-29 18:45:28,368 - epoch:15, training loss:2.2763 validation loss:6.5050
+2024-09-29 18:45:32,087 - epoch:16, training loss:2.3163 validation loss:6.3971
+2024-09-29 18:45:35,920 - epoch:17, training loss:2.2900 validation loss:6.3121
+2024-09-29 18:45:37,176 - [*] loss:50.4287
+2024-09-29 18:45:37,196 - [*] year 3, testing
+2024-09-29 18:45:37,241 - T:3	MAE	6.6857	RMSE	6.8871	MAPE	140.7189
+2024-09-29 18:45:37,324 - T:6	MAE	6.7102	RMSE	6.9743	MAPE	145.3530
+2024-09-29 18:45:37,559 - T:12	MAE	6.7427	RMSE	7.1434	MAPE	152.2831
+2024-09-29 18:45:37,559 - T:Avg	MAE	6.7077	RMSE	6.9852	MAPE	145.6513
+2024-09-29 18:45:37,565 - Finished optimization, total time:46.64 s, best model:log/ENERGY-Wind/stkec-46/3/6.1102.pkl
+2024-09-29 18:45:37,575 - 
+
+
+2024-09-29 18:45:37,575 - 3   	 MAE	      3.78	      1.64	      7.46	      6.69		    4.89
+2024-09-29 18:45:37,575 - 3   	RMSE	      4.52	      1.79	      7.52	      6.89		    5.18
+2024-09-29 18:45:37,575 - 3   	MAPE	     10.12	      4.55	     33.27	    140.72		   47.16
+2024-09-29 18:45:37,575 - 6   	 MAE	      3.63	      1.71	      7.48	      6.71		    4.88
+2024-09-29 18:45:37,575 - 6   	RMSE	      4.28	      1.91	      7.55	      6.97		    5.18
+2024-09-29 18:45:37,575 - 6   	MAPE	      9.71	      4.77	     33.38	    145.35		   48.30
+2024-09-29 18:45:37,575 - 12  	 MAE	      4.69	      1.82	      7.43	      6.74		    5.17
+2024-09-29 18:45:37,575 - 12  	RMSE	      5.40	      2.13	      7.56	      7.14		    5.56
+2024-09-29 18:45:37,575 - 12  	MAPE	     12.36	      5.12	     33.30	    152.28		   50.77
+2024-09-29 18:45:37,576 - Avg 	 MAE	      3.97	      1.71	      7.46	      6.71		    4.96
+2024-09-29 18:45:37,576 - Avg 	RMSE	      4.64	      1.93	      7.54	      6.99		    5.27
+2024-09-29 18:45:37,576 - Avg 	MAPE	     10.57	      4.78	     33.32	    145.65		   48.58
+2024-09-29 18:45:37,576 - year	0   	total_time	   10.5439	average_time	    1.5063	epoch	7
+2024-09-29 18:45:37,576 - year	1   	total_time	   87.3725	average_time	    2.4964	epoch	35
+2024-09-29 18:45:37,576 - year	2   	total_time	   56.0113	average_time	    2.6672	epoch	21
+2024-09-29 18:45:37,576 - year	3   	total_time	   46.6437	average_time	    2.5913	epoch	18
+2024-09-29 18:45:37,576 - total time: 200.5714
+2025-05-09 13:29:18,235 - logger name:log/ENERGY-Wind/stkec-46/stkec.log
+2025-05-09 13:29:18,235 - params : {'conf': 'conf/ENERGY-Wind/stkec.json', 'seed': 46, 'paral': 0, 'gpuid': 1, 'logname': 'stkec', 'method': 'STKEC', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS3/trafficStream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=1), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>}, 'begin_year': 0, 'end_year': 3, 'dropout': 0.0, 'lr': 0.01, 'batch_size': 1, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'influe_length': 168, 'data_process': 0, 'batch_influ_size': 4, 'beita': 1, 'cluster': 24, 'raw_data_path': '/data/weichen/TrafficStream_data/ENERGY-Wind/RawData/', 'save_data_path': '/data/weichen/TrafficStream_data/ENERGY-Wind/FastData/', 'graph_path': '/data/weichen/TrafficStream_data/ENERGY-Wind/graph/', 'model_path': 'log/ENERGY-Wind/', 'influence_path': "Pleaseenter'outdir'inyourpath", 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': True, 'train': 0, 'auto_test': 1, 'strategy': 'incremental', 'increase': True, 'num_hops': 2, 'detect': True, 'detect_strategy': 'feature', 'detect_infl_strategy': True, 'infl_topk': 10, 'adp_adj': False, 'skip_dim': 64, 'end_dim': 64, 'hidden_channels': 32, 'dilation_channels': 64, 'residual_channels': 64, 'input_dim': 1, 'output_dim': 1, 'ewc': True, 'ewc_strategy': 'ewc', 'ewc_lambda': 0.0005, 'replay': True, 'replay_strategy': 'random', 'repaly_num_samples': 100, 'path': 'log/ENERGY-Wind/stkec-46', 'logger': <Logger utils.initialize (INFO)>}
+2025-05-09 13:29:18,239 - [*] Year 0 load from /data/weichen/TrafficStream_data/ENERGY-Wind/FastData/0.npz
+2025-05-09 13:29:18,999 - [*] load from log/ENERGY-Wind/stkec-46/0/2.6533.pkl
+2025-05-09 13:30:15,680 - [*] year 0, testing
+2025-05-09 13:30:15,727 - T:3	MAE	2.5435	RMSE	3.2535	MAPE	7.0100
+2025-05-09 13:30:15,881 - T:6	MAE	2.3728	RMSE	3.0631	MAPE	6.5804
+2025-05-09 13:30:16,379 - T:12	MAE	3.1078	RMSE	3.9287	MAPE	8.3937
+2025-05-09 13:30:16,380 - T:Avg	MAE	2.6236	RMSE	3.3411	MAPE	7.1949
+2025-05-09 13:30:16,385 - [*] Year 1 load from /data/weichen/TrafficStream_data/ENERGY-Wind/FastData/1.npz
+2025-05-09 13:30:16,386 - [*] load from log/ENERGY-Wind/stkec-46/0/2.6533.pkl
+2025-05-09 13:30:16,406 - [*] detect strategy feature
+2025-05-09 13:30:18,207 - number of increase nodes:29, nodes after 2 hop:torch.Size([98]), total nodes this year 113
+2025-05-09 13:30:18,207 - [*] load from log/ENERGY-Wind/stkec-46/1/0.897.pkl
+2025-05-09 13:35:15,898 - [*] year 1, testing
+2025-05-09 13:35:15,944 - T:3	MAE	0.6574	RMSE	0.9431	MAPE	1.8908
+2025-05-09 13:35:16,016 - T:6	MAE	0.7660	RMSE	1.1056	MAPE	2.2116
+2025-05-09 13:35:16,343 - T:12	MAE	1.0281	RMSE	1.4670	MAPE	2.9598
+2025-05-09 13:35:16,343 - T:Avg	MAE	0.7965	RMSE	1.1420	MAPE	2.2948
+2025-05-09 13:35:16,350 - [*] Year 2 load from /data/weichen/TrafficStream_data/ENERGY-Wind/FastData/2.npz
+2025-05-09 13:35:16,352 - [*] load from log/ENERGY-Wind/stkec-46/1/0.897.pkl
+2025-05-09 13:35:16,389 - [*] detect strategy feature
+2025-05-09 13:35:18,006 - number of increase nodes:27, nodes after 2 hop:torch.Size([118]), total nodes this year 122
+2025-05-09 13:35:18,006 - [*] load from log/ENERGY-Wind/stkec-46/2/7.4999.pkl
+2025-05-09 13:35:56,520 - [*] year 2, testing
+2025-05-09 13:35:56,570 - T:3	MAE	5.1116	RMSE	5.3114	MAPE	23.1799
+2025-05-09 13:35:56,651 - T:6	MAE	5.1244	RMSE	5.3531	MAPE	23.2996
+2025-05-09 13:35:57,009 - T:12	MAE	5.0835	RMSE	5.3863	MAPE	23.2409
+2025-05-09 13:35:57,009 - T:Avg	MAE	5.1087	RMSE	5.3464	MAPE	23.2395
+2025-05-09 13:35:57,015 - [*] Year 3 load from /data/weichen/TrafficStream_data/ENERGY-Wind/FastData/3.npz
+2025-05-09 13:35:57,016 - [*] load from log/ENERGY-Wind/stkec-46/2/7.4999.pkl
+2025-05-09 13:35:57,056 - [*] detect strategy feature
+2025-05-09 13:35:58,771 - number of increase nodes:31, nodes after 2 hop:torch.Size([110]), total nodes this year 134
+2025-05-09 13:35:58,771 - [*] load from log/ENERGY-Wind/stkec-46/3/6.1102.pkl
+2025-05-09 13:36:38,515 - [*] year 3, testing
+2025-05-09 13:36:38,567 - T:3	MAE	5.5437	RMSE	5.7434	MAPE	122.2010
+2025-05-09 13:36:38,650 - T:6	MAE	5.5716	RMSE	5.8394	MAPE	126.6426
+2025-05-09 13:36:38,963 - T:12	MAE	5.6188	RMSE	6.0278	MAPE	133.3625
+2025-05-09 13:36:38,963 - T:Avg	MAE	5.5718	RMSE	5.8523	MAPE	126.9594
+2025-05-09 13:36:38,964 - 
+
+
+2025-05-09 13:36:38,964 - 3   	 MAE	      2.54	      0.66	      5.11	      5.54		    3.46
+2025-05-09 13:36:38,964 - 3   	RMSE	      3.25	      0.94	      5.31	      5.74		    3.81
+2025-05-09 13:36:38,964 - 3   	MAPE	      7.01	      1.89	     23.18	    122.20		   38.57
+2025-05-09 13:36:38,964 - 6   	 MAE	      2.37	      0.77	      5.12	      5.57		    3.46
+2025-05-09 13:36:38,965 - 6   	RMSE	      3.06	      1.11	      5.35	      5.84		    3.84
+2025-05-09 13:36:38,965 - 6   	MAPE	      6.58	      2.21	     23.30	    126.64		   39.68
+2025-05-09 13:36:38,965 - 12  	 MAE	      3.11	      1.03	      5.08	      5.62		    3.71
+2025-05-09 13:36:38,965 - 12  	RMSE	      3.93	      1.47	      5.39	      6.03		    4.20
+2025-05-09 13:36:38,965 - 12  	MAPE	      8.39	      2.96	     23.24	    133.36		   41.99
+2025-05-09 13:36:38,965 - Avg 	 MAE	      2.62	      0.80	      5.11	      5.57		    3.53
+2025-05-09 13:36:38,965 - Avg 	RMSE	      3.34	      1.14	      5.35	      5.85		    3.92
+2025-05-09 13:36:38,965 - Avg 	MAPE	      7.19	      2.29	     23.24	    126.96		   39.92
+2025-05-09 13:36:38,965 - total time: 0.0000

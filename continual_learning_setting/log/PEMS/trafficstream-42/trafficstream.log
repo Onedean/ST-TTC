@@ -1,0 +1,304 @@
+2024-09-12 21:54:43,677 - logger name:log/PEMS/trafficstream-42/trafficstream.log
+2024-09-12 21:54:43,677 - params : {'conf': 'new_conf/PEMS/trafficstream.json', 'seed': 42, 'paral': 0, 'gpuid': 2, 'logname': 'trafficstream', 'method': 'TrafficStream', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS/trafficstream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=2), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'LSTM': <class 'src.model.model.LSTM_Model'>, 'MLP': <class 'src.model.model.MLP_Model'>, 'STLora': <class 'src.model.model.STLora_Model'>, 'STEmb': <class 'src.model.model.STEmb_Model'>}, 'begin_year': 2011, 'end_year': 2017, 'dropout': 0.0, 'lr': 0.01, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': 'data/PEMS/RawData/', 'save_data_path': 'data/PEMS/FastData/', 'graph_path': 'data/PEMS/graph/', 'model_path': 'log/PEMS/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': True, 'train': 1, 'auto_test': 0, 'strategy': 'incremental', 'increase': True, 'num_hops': 2, 'detect': True, 'detect_strategy': 'feature', 'ewc': True, 'ewc_strategy': 'ewc', 'ewc_lambda': 0.0001, 'replay': True, 'replay_strategy': 'inforeplay', 'path': 'log/PEMS/trafficstream-42', 'logger': <Logger utils.initialize (INFO)>}
+2024-09-12 21:54:43,689 - [*] Year 2011 load from data/PEMS/FastData/2011.npz
+2024-09-12 21:54:44,365 - [*] Year 2011 Dataset load!
+2024-09-12 21:54:44,367 - [*] Year 2011 Training start
+2024-09-12 21:54:45,244 - node number torch.Size([83840, 12])
+2024-09-12 21:54:47,781 - epoch:0, training loss:18999.0649 validation loss:58.8393
+2024-09-12 21:54:50,518 - epoch:1, training loss:4037.9790 validation loss:39.2743
+2024-09-12 21:54:53,241 - epoch:2, training loss:2282.6153 validation loss:32.5465
+2024-09-12 21:54:55,978 - epoch:3, training loss:1605.2674 validation loss:26.6887
+2024-09-12 21:54:58,687 - epoch:4, training loss:1165.6432 validation loss:22.3467
+2024-09-12 21:55:01,411 - epoch:5, training loss:960.2273 validation loss:20.0786
+2024-09-12 21:55:04,134 - epoch:6, training loss:874.0745 validation loss:18.9320
+2024-09-12 21:55:06,887 - epoch:7, training loss:836.2644 validation loss:18.3551
+2024-09-12 21:55:09,633 - epoch:8, training loss:819.4391 validation loss:18.1014
+2024-09-12 21:55:12,366 - epoch:9, training loss:810.1382 validation loss:18.0816
+2024-09-12 21:55:15,097 - epoch:10, training loss:811.6614 validation loss:17.9161
+2024-09-12 21:55:17,853 - epoch:11, training loss:800.6902 validation loss:17.6799
+2024-09-12 21:55:20,609 - epoch:12, training loss:800.4111 validation loss:17.9658
+2024-09-12 21:55:23,364 - epoch:13, training loss:795.0782 validation loss:17.7742
+2024-09-12 21:55:26,366 - epoch:14, training loss:794.4355 validation loss:17.4690
+2024-09-12 21:55:29,130 - epoch:15, training loss:793.7200 validation loss:17.4758
+2024-09-12 21:55:31,871 - epoch:16, training loss:795.5231 validation loss:17.4468
+2024-09-12 21:55:34,604 - epoch:17, training loss:783.4094 validation loss:17.5067
+2024-09-12 21:55:37,341 - epoch:18, training loss:780.3857 validation loss:17.7359
+2024-09-12 21:55:40,110 - epoch:19, training loss:776.6582 validation loss:17.3199
+2024-09-12 21:55:42,876 - epoch:20, training loss:773.6507 validation loss:17.3044
+2024-09-12 21:55:45,698 - epoch:21, training loss:768.7310 validation loss:17.2852
+2024-09-12 21:55:48,483 - epoch:22, training loss:764.0528 validation loss:17.2832
+2024-09-12 21:55:51,256 - epoch:23, training loss:764.1850 validation loss:17.2414
+2024-09-12 21:55:54,035 - epoch:24, training loss:752.4435 validation loss:17.1515
+2024-09-12 21:55:56,774 - epoch:25, training loss:744.0549 validation loss:17.1424
+2024-09-12 21:55:59,530 - epoch:26, training loss:745.9149 validation loss:17.2972
+2024-09-12 21:56:02,287 - epoch:27, training loss:734.5520 validation loss:16.9335
+2024-09-12 21:56:05,018 - epoch:28, training loss:731.0128 validation loss:16.9446
+2024-09-12 21:56:07,759 - epoch:29, training loss:727.2079 validation loss:17.0489
+2024-09-12 21:56:10,476 - epoch:30, training loss:723.7393 validation loss:16.8969
+2024-09-12 21:56:13,218 - epoch:31, training loss:728.3789 validation loss:16.9348
+2024-09-12 21:56:16,077 - epoch:32, training loss:724.4965 validation loss:17.5865
+2024-09-12 21:56:18,810 - epoch:33, training loss:734.1159 validation loss:16.8066
+2024-09-12 21:56:21,618 - epoch:34, training loss:717.8720 validation loss:16.8687
+2024-09-12 21:56:24,368 - epoch:35, training loss:719.8445 validation loss:16.7822
+2024-09-12 21:56:27,230 - epoch:36, training loss:716.6083 validation loss:17.0276
+2024-09-12 21:56:30,115 - epoch:37, training loss:715.1970 validation loss:16.8999
+2024-09-12 21:56:32,831 - epoch:38, training loss:715.9545 validation loss:16.6936
+2024-09-12 21:56:35,642 - epoch:39, training loss:716.8102 validation loss:16.9865
+2024-09-12 21:56:38,429 - epoch:40, training loss:715.6322 validation loss:16.7605
+2024-09-12 21:56:41,278 - epoch:41, training loss:714.1661 validation loss:16.9598
+2024-09-12 21:56:44,119 - epoch:42, training loss:717.1277 validation loss:16.8740
+2024-09-12 21:56:46,861 - epoch:43, training loss:712.7207 validation loss:16.7952
+2024-09-12 21:56:49,668 - epoch:44, training loss:726.5074 validation loss:16.9658
+2024-09-12 21:56:50,544 - [*] loss:667.0956
+2024-09-12 21:56:50,566 - [*] year 2011, testing
+2024-09-12 21:56:50,829 - T:3	MAE	13.0628	RMSE	20.0908	MAPE	16.8664
+2024-09-12 21:56:51,291 - T:6	MAE	14.1605	RMSE	22.0472	MAPE	19.5149
+2024-09-12 21:56:52,744 - T:12	MAE	16.4948	RMSE	26.0458	MAPE	25.2652
+2024-09-12 21:56:52,745 - T:Avg	MAE	14.3583	RMSE	22.3452	MAPE	20.1898
+2024-09-12 21:56:52,746 - Finished optimization, total time:88.08 s, best model:log/PEMS/trafficstream-42/2011/16.6936.pkl
+2024-09-12 21:56:52,764 - [*] Year 2012 load from data/PEMS/FastData/2012.npz
+2024-09-12 21:56:52,771 - [*] load from log/PEMS/trafficstream-42/2011/16.6936.pkl
+2024-09-12 21:56:55,972 - number of increase nodes:128, nodes after 2 hop:torch.Size([316]), total nodes this year 715
+2024-09-12 21:56:56,820 - [*] Year 2012 Dataset load!
+2024-09-12 21:56:56,820 - [*] load from log/PEMS/trafficstream-42/2011/16.6936.pkl
+2024-09-12 21:56:56,823 - [*] EWC! lambda 0.000100
+2024-09-12 21:56:59,586 - [*] Year 2012 Training start
+2024-09-12 21:57:00,515 - node number torch.Size([40448, 12])
+2024-09-12 21:57:02,738 - epoch:0, training loss:1016.8539 validation loss:18.5897
+2024-09-12 21:57:05,444 - epoch:1, training loss:953.3807 validation loss:18.4162
+2024-09-12 21:57:08,233 - epoch:2, training loss:945.1740 validation loss:18.4442
+2024-09-12 21:57:11,024 - epoch:3, training loss:941.7005 validation loss:18.3916
+2024-09-12 21:57:13,749 - epoch:4, training loss:960.6783 validation loss:18.5058
+2024-09-12 21:57:16,484 - epoch:5, training loss:945.1251 validation loss:18.5284
+2024-09-12 21:57:19,309 - epoch:6, training loss:940.8473 validation loss:18.9391
+2024-09-12 21:57:22,008 - epoch:7, training loss:938.6686 validation loss:18.4349
+2024-09-12 21:57:24,714 - epoch:8, training loss:942.5244 validation loss:18.5136
+2024-09-12 21:57:27,372 - epoch:9, training loss:939.5212 validation loss:18.6497
+2024-09-12 21:57:28,452 - [*] loss:668.6391
+2024-09-12 21:57:28,477 - [*] year 2012, testing
+2024-09-12 21:57:28,728 - T:3	MAE	12.5026	RMSE	19.7545	MAPE	17.3701
+2024-09-12 21:57:29,163 - T:6	MAE	13.6806	RMSE	21.8396	MAPE	20.4000
+2024-09-12 21:57:30,533 - T:12	MAE	16.1144	RMSE	26.0702	MAPE	26.8681
+2024-09-12 21:57:30,533 - T:Avg	MAE	13.8766	RMSE	22.1532	MAPE	21.1329
+2024-09-12 21:57:30,534 - Finished optimization, total time:17.73 s, best model:log/PEMS/trafficstream-42/2012/18.3916.pkl
+2024-09-12 21:57:30,555 - [*] Year 2013 load from data/PEMS/FastData/2013.npz
+2024-09-12 21:57:30,565 - [*] load from log/PEMS/trafficstream-42/2012/18.3916.pkl
+2024-09-12 21:57:34,272 - number of increase nodes:149, nodes after 2 hop:torch.Size([364]), total nodes this year 786
+2024-09-12 21:57:35,134 - [*] Year 2013 Dataset load!
+2024-09-12 21:57:35,134 - [*] load from log/PEMS/trafficstream-42/2012/18.3916.pkl
+2024-09-12 21:57:35,137 - [*] EWC! lambda 0.000100
+2024-09-12 21:57:37,817 - [*] Year 2013 Training start
+2024-09-12 21:57:38,859 - node number torch.Size([46592, 12])
+2024-09-12 21:57:40,781 - epoch:0, training loss:774.5520 validation loss:17.1837
+2024-09-12 21:57:43,608 - epoch:1, training loss:752.6713 validation loss:17.9117
+2024-09-12 21:57:46,348 - epoch:2, training loss:731.7670 validation loss:17.9150
+2024-09-12 21:57:49,128 - epoch:3, training loss:731.3498 validation loss:17.9246
+2024-09-12 21:57:52,260 - epoch:4, training loss:736.4254 validation loss:17.5456
+2024-09-12 21:57:55,107 - epoch:5, training loss:735.3730 validation loss:17.5782
+2024-09-12 21:57:57,871 - epoch:6, training loss:736.6923 validation loss:19.3861
+2024-09-12 21:57:58,981 - [*] loss:739.6769
+2024-09-12 21:57:59,011 - [*] year 2013, testing
+2024-09-12 21:57:59,282 - T:3	MAE	12.5196	RMSE	20.0288	MAPE	17.6649
+2024-09-12 21:57:59,755 - T:6	MAE	13.8478	RMSE	22.5416	MAPE	20.5362
+2024-09-12 21:58:01,305 - T:12	MAE	16.6139	RMSE	27.4193	MAPE	26.6770
+2024-09-12 21:58:01,306 - T:Avg	MAE	14.0725	RMSE	22.8583	MAPE	21.2134
+2024-09-12 21:58:01,307 - Finished optimization, total time:12.81 s, best model:log/PEMS/trafficstream-42/2013/17.1837.pkl
+2024-09-12 21:58:01,331 - [*] Year 2014 load from data/PEMS/FastData/2014.npz
+2024-09-12 21:58:01,339 - [*] load from log/PEMS/trafficstream-42/2013/17.1837.pkl
+2024-09-12 21:58:05,296 - number of increase nodes:118, nodes after 2 hop:torch.Size([351]), total nodes this year 822
+2024-09-12 21:58:06,178 - [*] Year 2014 Dataset load!
+2024-09-12 21:58:06,178 - [*] load from log/PEMS/trafficstream-42/2013/17.1837.pkl
+2024-09-12 21:58:06,181 - [*] EWC! lambda 0.000100
+2024-09-12 21:58:08,966 - [*] Year 2014 Training start
+2024-09-12 21:58:09,967 - node number torch.Size([44928, 12])
+2024-09-12 21:58:11,999 - epoch:0, training loss:987.8682 validation loss:19.5200
+2024-09-12 21:58:14,885 - epoch:1, training loss:973.2308 validation loss:19.4184
+2024-09-12 21:58:17,824 - epoch:2, training loss:965.0363 validation loss:19.3657
+2024-09-12 21:58:20,714 - epoch:3, training loss:966.1100 validation loss:20.7816
+2024-09-12 21:58:23,594 - epoch:4, training loss:967.1299 validation loss:19.4097
+2024-09-12 21:58:26,586 - epoch:5, training loss:960.2406 validation loss:19.4152
+2024-09-12 21:58:29,435 - epoch:6, training loss:960.3392 validation loss:19.6501
+2024-09-12 21:58:32,328 - epoch:7, training loss:982.6208 validation loss:19.9897
+2024-09-12 21:58:35,220 - epoch:8, training loss:971.8552 validation loss:19.5718
+2024-09-12 21:58:36,345 - [*] loss:802.3815
+2024-09-12 21:58:36,373 - [*] year 2014, testing
+2024-09-12 21:58:36,647 - T:3	MAE	13.3369	RMSE	21.3228	MAPE	18.4378
+2024-09-12 21:58:37,232 - T:6	MAE	14.6472	RMSE	23.7284	MAPE	21.6770
+2024-09-12 21:58:38,902 - T:12	MAE	17.5320	RMSE	28.6301	MAPE	29.4165
+2024-09-12 21:58:38,903 - T:Avg	MAE	14.9120	RMSE	24.0838	MAPE	22.7201
+2024-09-12 21:58:38,904 - Finished optimization, total time:16.87 s, best model:log/PEMS/trafficstream-42/2014/19.3657.pkl
+2024-09-12 21:58:38,933 - [*] Year 2015 load from data/PEMS/FastData/2015.npz
+2024-09-12 21:58:38,943 - [*] load from log/PEMS/trafficstream-42/2014/19.3657.pkl
+2024-09-12 21:58:42,912 - number of increase nodes:94, nodes after 2 hop:torch.Size([260]), total nodes this year 834
+2024-09-12 21:58:43,746 - [*] Year 2015 Dataset load!
+2024-09-12 21:58:43,746 - [*] load from log/PEMS/trafficstream-42/2014/19.3657.pkl
+2024-09-12 21:58:43,749 - [*] EWC! lambda 0.000100
+2024-09-12 21:58:46,621 - [*] Year 2015 Training start
+2024-09-12 21:58:47,700 - node number torch.Size([33280, 12])
+2024-09-12 21:58:49,508 - epoch:0, training loss:973.4194 validation loss:14.5853
+2024-09-12 21:58:52,308 - epoch:1, training loss:908.0433 validation loss:14.2138
+2024-09-12 21:58:55,198 - epoch:2, training loss:903.4741 validation loss:14.2496
+2024-09-12 21:58:57,976 - epoch:3, training loss:900.0733 validation loss:14.3176
+2024-09-12 21:59:00,754 - epoch:4, training loss:899.0869 validation loss:14.7352
+2024-09-12 21:59:03,541 - epoch:5, training loss:901.2549 validation loss:14.5010
+2024-09-12 21:59:06,447 - epoch:6, training loss:899.9681 validation loss:14.4953
+2024-09-12 21:59:09,234 - epoch:7, training loss:893.0444 validation loss:14.4057
+2024-09-12 21:59:10,417 - [*] loss:811.0519
+2024-09-12 21:59:10,444 - [*] year 2015, testing
+2024-09-12 21:59:10,723 - T:3	MAE	12.8973	RMSE	20.9472	MAPE	18.5153
+2024-09-12 21:59:11,290 - T:6	MAE	14.3094	RMSE	23.7015	MAPE	21.6332
+2024-09-12 21:59:12,962 - T:12	MAE	17.1600	RMSE	28.7757	MAPE	28.4599
+2024-09-12 21:59:12,962 - T:Avg	MAE	14.5270	RMSE	23.9910	MAPE	22.3638
+2024-09-12 21:59:12,964 - Finished optimization, total time:13.87 s, best model:log/PEMS/trafficstream-42/2015/14.2138.pkl
+2024-09-12 21:59:12,987 - [*] Year 2016 load from data/PEMS/FastData/2016.npz
+2024-09-12 21:59:12,996 - [*] load from log/PEMS/trafficstream-42/2015/14.2138.pkl
+2024-09-12 21:59:16,994 - number of increase nodes:99, nodes after 2 hop:torch.Size([200]), total nodes this year 850
+2024-09-12 21:59:17,804 - [*] Year 2016 Dataset load!
+2024-09-12 21:59:17,804 - [*] load from log/PEMS/trafficstream-42/2015/14.2138.pkl
+2024-09-12 21:59:17,807 - [*] EWC! lambda 0.000100
+2024-09-12 21:59:20,633 - [*] Year 2016 Training start
+2024-09-12 21:59:21,671 - node number torch.Size([25600, 12])
+2024-09-12 21:59:23,426 - epoch:0, training loss:1085.4304 validation loss:13.2656
+2024-09-12 21:59:26,095 - epoch:1, training loss:1030.1752 validation loss:13.1657
+2024-09-12 21:59:28,797 - epoch:2, training loss:1029.0585 validation loss:13.1501
+2024-09-12 21:59:31,447 - epoch:3, training loss:1028.0058 validation loss:13.1147
+2024-09-12 21:59:34,107 - epoch:4, training loss:1026.7402 validation loss:13.5621
+2024-09-12 21:59:36,829 - epoch:5, training loss:1027.8742 validation loss:13.4344
+2024-09-12 21:59:39,554 - epoch:6, training loss:1022.4177 validation loss:13.2364
+2024-09-12 21:59:42,305 - epoch:7, training loss:1025.9159 validation loss:13.3081
+2024-09-12 21:59:45,041 - epoch:8, training loss:1038.0302 validation loss:13.4261
+2024-09-12 21:59:47,773 - epoch:9, training loss:1038.2616 validation loss:13.5778
+2024-09-12 21:59:49,053 - [*] loss:862.9630
+2024-09-12 21:59:49,077 - [*] year 2016, testing
+2024-09-12 21:59:49,361 - T:3	MAE	12.4967	RMSE	22.0496	MAPE	18.3592
+2024-09-12 21:59:49,945 - T:6	MAE	13.9199	RMSE	24.7598	MAPE	22.1242
+2024-09-12 21:59:51,737 - T:12	MAE	16.7850	RMSE	29.6335	MAPE	29.7496
+2024-09-12 21:59:51,738 - T:Avg	MAE	14.1393	RMSE	24.9910	MAPE	22.8923
+2024-09-12 21:59:51,739 - Finished optimization, total time:16.23 s, best model:log/PEMS/trafficstream-42/2016/13.1147.pkl
+2024-09-12 21:59:51,765 - [*] Year 2017 load from data/PEMS/FastData/2017.npz
+2024-09-12 21:59:51,775 - [*] load from log/PEMS/trafficstream-42/2016/13.1147.pkl
+2024-09-12 21:59:55,931 - number of increase nodes:106, nodes after 2 hop:torch.Size([286]), total nodes this year 871
+2024-09-12 21:59:56,864 - [*] Year 2017 Dataset load!
+2024-09-12 21:59:56,864 - [*] load from log/PEMS/trafficstream-42/2016/13.1147.pkl
+2024-09-12 21:59:56,867 - [*] EWC! lambda 0.000100
+2024-09-12 21:59:59,790 - [*] Year 2017 Training start
+2024-09-12 22:00:00,915 - node number torch.Size([36608, 12])
+2024-09-12 22:00:02,858 - epoch:0, training loss:813.2836 validation loss:17.1068
+2024-09-12 22:00:05,931 - epoch:1, training loss:764.0640 validation loss:16.9996
+2024-09-12 22:00:08,920 - epoch:2, training loss:763.7690 validation loss:17.0211
+2024-09-12 22:00:11,849 - epoch:3, training loss:767.1665 validation loss:16.6464
+2024-09-12 22:00:14,868 - epoch:4, training loss:758.3244 validation loss:17.6427
+2024-09-12 22:00:17,788 - epoch:5, training loss:756.6296 validation loss:16.9417
+2024-09-12 22:00:20,826 - epoch:6, training loss:755.4038 validation loss:16.8626
+2024-09-12 22:00:23,863 - epoch:7, training loss:761.6969 validation loss:17.3174
+2024-09-12 22:00:26,814 - epoch:8, training loss:755.6741 validation loss:16.7413
+2024-09-12 22:00:30,044 - epoch:9, training loss:757.2846 validation loss:17.3672
+2024-09-12 22:00:31,294 - [*] loss:867.6188
+2024-09-12 22:00:31,317 - [*] year 2017, testing
+2024-09-12 22:00:31,610 - T:3	MAE	13.8784	RMSE	22.7732	MAPE	18.5379
+2024-09-12 22:00:32,202 - T:6	MAE	15.2026	RMSE	25.1424	MAPE	21.6777
+2024-09-12 22:00:33,935 - T:12	MAE	17.9104	RMSE	29.7062	MAPE	28.3411
+2024-09-12 22:00:33,935 - T:Avg	MAE	15.4187	RMSE	25.4440	MAPE	22.3943
+2024-09-12 22:00:33,937 - Finished optimization, total time:18.85 s, best model:log/PEMS/trafficstream-42/2017/16.6464.pkl
+2024-09-12 22:00:33,950 - 
+
+
+2024-09-12 22:00:33,950 - 3   	 MAE	     13.06	     12.50	     12.52	     13.34	     12.90	     12.50	     13.88		   12.96
+2024-09-12 22:00:33,950 - 3   	RMSE	     20.09	     19.75	     20.03	     21.32	     20.95	     22.05	     22.77		   21.00
+2024-09-12 22:00:33,950 - 3   	MAPE	     16.87	     17.37	     17.66	     18.44	     18.52	     18.36	     18.54		   17.96
+2024-09-12 22:00:33,950 - 6   	 MAE	     14.16	     13.68	     13.85	     14.65	     14.31	     13.92	     15.20		   14.25
+2024-09-12 22:00:33,950 - 6   	RMSE	     22.05	     21.84	     22.54	     23.73	     23.70	     24.76	     25.14		   23.39
+2024-09-12 22:00:33,950 - 6   	MAPE	     19.51	     20.40	     20.54	     21.68	     21.63	     22.12	     21.68		   21.08
+2024-09-12 22:00:33,950 - 12  	 MAE	     16.49	     16.11	     16.61	     17.53	     17.16	     16.79	     17.91		   16.94
+2024-09-12 22:00:33,950 - 12  	RMSE	     26.05	     26.07	     27.42	     28.63	     28.78	     29.63	     29.71		   28.04
+2024-09-12 22:00:33,950 - 12  	MAPE	     25.27	     26.87	     26.68	     29.42	     28.46	     29.75	     28.34		   27.83
+2024-09-12 22:00:33,950 - Avg 	 MAE	     14.36	     13.88	     14.07	     14.91	     14.53	     14.14	     15.42		   14.47
+2024-09-12 22:00:33,950 - Avg 	RMSE	     22.35	     22.15	     22.86	     24.08	     23.99	     24.99	     25.44		   23.70
+2024-09-12 22:00:33,950 - Avg 	MAPE	     20.19	     21.13	     21.21	     22.72	     22.36	     22.89	     22.39		   21.84
+2024-09-12 22:00:33,951 - year	2011	total_time	   88.0757	average_time	    1.9572	epoch	45
+2024-09-12 22:00:33,951 - year	2012	total_time	   17.7250	average_time	    1.7725	epoch	10
+2024-09-12 22:00:33,951 - year	2013	total_time	   12.8125	average_time	    1.8304	epoch	7
+2024-09-12 22:00:33,951 - year	2014	total_time	   16.8680	average_time	    1.8742	epoch	9
+2024-09-12 22:00:33,951 - year	2015	total_time	   13.8684	average_time	    1.7336	epoch	8
+2024-09-12 22:00:33,951 - year	2016	total_time	   16.2303	average_time	    1.6230	epoch	10
+2024-09-12 22:00:33,951 - year	2017	total_time	   18.8482	average_time	    1.8848	epoch	10
+2024-09-12 22:00:33,951 - total time: 184.4280
+2025-05-09 04:12:43,614 - logger name:log/PEMS/trafficstream-42/trafficstream.log
+2025-05-09 04:12:43,615 - params : {'conf': 'conf/PEMS/trafficstream.json', 'seed': 42, 'paral': 0, 'gpuid': 1, 'logname': 'trafficstream', 'method': 'TrafficStream', 'load_first_year': 1, 'first_year_model_path': 'log/ENERGY-Wind/eac-42/0/2.88.pkl', 'device': device(type='cuda', index=1), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'EAC': <class 'src.model.model.EAC_Model'>, 'Universal': <class 'src.model.model.Universal_Model'>}, 'begin_year': 2011, 'end_year': 2017, 'dropout': 0.0, 'lr': 0.01, 'batch_size': 1, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': '/data/weichen/TrafficStream_data/PEMS/RawData/', 'save_data_path': '/data/weichen/TrafficStream_data/PEMS/FastData/', 'graph_path': '/data/weichen/TrafficStream_data/PEMS/graph/', 'model_path': 'log/PEMS/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': True, 'train': 0, 'auto_test': 1, 'strategy': 'incremental', 'increase': True, 'num_hops': 2, 'detect': True, 'detect_strategy': 'feature', 'ewc': True, 'ewc_strategy': 'ewc', 'ewc_lambda': 0.0001, 'replay': True, 'replay_strategy': 'inforeplay', 'path': 'log/PEMS/trafficstream-42', 'logger': <Logger utils.initialize (INFO)>}
+2025-05-09 04:12:43,628 - [*] Year 2011 load from /data/weichen/TrafficStream_data/PEMS/FastData/2011.npz
+2025-05-09 04:12:43,781 - [*] load from log/PEMS/trafficstream-42/2011/16.6936.pkl
+2025-05-09 04:12:58,282 - [*] year 2011, testing
+2025-05-09 04:12:58,662 - T:3	MAE	12.9182	RMSE	19.8349	MAPE	16.6913
+2025-05-09 04:12:59,260 - T:6	MAE	14.0404	RMSE	21.8394	MAPE	19.2850
+2025-05-09 04:13:00,828 - T:12	MAE	16.4035	RMSE	25.8900	MAPE	24.8856
+2025-05-09 04:13:00,828 - T:Avg	MAE	14.2363	RMSE	22.1332	MAPE	19.9319
+2025-05-09 04:13:00,846 - [*] Year 2012 load from /data/weichen/TrafficStream_data/PEMS/FastData/2012.npz
+2025-05-09 04:13:00,857 - [*] load from log/PEMS/trafficstream-42/2012/18.3916.pkl
+2025-05-09 04:13:04,997 - number of increase nodes:129, nodes after 2 hop:torch.Size([323]), total nodes this year 715
+2025-05-09 04:13:04,997 - [*] load from log/PEMS/trafficstream-42/2012/18.3916.pkl
+2025-05-09 04:13:20,127 - [*] year 2012, testing
+2025-05-09 04:13:20,443 - T:3	MAE	12.2322	RMSE	19.3465	MAPE	16.9619
+2025-05-09 04:13:21,082 - T:6	MAE	13.4277	RMSE	21.4693	MAPE	19.9007
+2025-05-09 04:13:22,829 - T:12	MAE	15.9111	RMSE	25.7719	MAPE	26.1715
+2025-05-09 04:13:22,830 - T:Avg	MAE	13.6278	RMSE	21.7846	MAPE	20.6053
+2025-05-09 04:13:22,846 - [*] Year 2013 load from /data/weichen/TrafficStream_data/PEMS/FastData/2013.npz
+2025-05-09 04:13:22,853 - [*] load from log/PEMS/trafficstream-42/2013/17.1837.pkl
+2025-05-09 04:13:26,880 - number of increase nodes:149, nodes after 2 hop:torch.Size([386]), total nodes this year 786
+2025-05-09 04:13:26,880 - [*] load from log/PEMS/trafficstream-42/2013/17.1837.pkl
+2025-05-09 04:13:41,512 - [*] year 2013, testing
+2025-05-09 04:13:41,877 - T:3	MAE	12.4595	RMSE	20.0027	MAPE	17.2469
+2025-05-09 04:13:42,524 - T:6	MAE	13.7886	RMSE	22.5115	MAPE	20.0388
+2025-05-09 04:13:44,391 - T:12	MAE	16.5554	RMSE	27.3874	MAPE	26.0160
+2025-05-09 04:13:44,391 - T:Avg	MAE	14.0122	RMSE	22.8286	MAPE	20.6943
+2025-05-09 04:13:44,408 - [*] Year 2014 load from /data/weichen/TrafficStream_data/PEMS/FastData/2014.npz
+2025-05-09 04:13:44,420 - [*] load from log/PEMS/trafficstream-42/2014/19.3657.pkl
+2025-05-09 04:13:48,583 - number of increase nodes:117, nodes after 2 hop:torch.Size([323]), total nodes this year 822
+2025-05-09 04:13:48,583 - [*] load from log/PEMS/trafficstream-42/2014/19.3657.pkl
+2025-05-09 04:14:03,515 - [*] year 2014, testing
+2025-05-09 04:14:03,872 - T:3	MAE	13.2478	RMSE	21.2528	MAPE	18.2800
+2025-05-09 04:14:04,566 - T:6	MAE	14.5435	RMSE	23.6359	MAPE	21.4867
+2025-05-09 04:14:06,555 - T:12	MAE	17.3935	RMSE	28.5122	MAPE	28.9943
+2025-05-09 04:14:06,555 - T:Avg	MAE	14.7996	RMSE	23.9873	MAPE	22.4599
+2025-05-09 04:14:06,575 - [*] Year 2015 load from /data/weichen/TrafficStream_data/PEMS/FastData/2015.npz
+2025-05-09 04:14:06,588 - [*] load from log/PEMS/trafficstream-42/2015/14.2138.pkl
+2025-05-09 04:14:10,951 - number of increase nodes:94, nodes after 2 hop:torch.Size([233]), total nodes this year 834
+2025-05-09 04:14:10,952 - [*] load from log/PEMS/trafficstream-42/2015/14.2138.pkl
+2025-05-09 04:14:26,003 - [*] year 2015, testing
+2025-05-09 04:14:26,333 - T:3	MAE	12.9129	RMSE	20.9864	MAPE	18.1949
+2025-05-09 04:14:27,024 - T:6	MAE	14.3200	RMSE	23.7354	MAPE	21.2108
+2025-05-09 04:14:28,975 - T:12	MAE	17.1348	RMSE	28.7680	MAPE	27.7877
+2025-05-09 04:14:28,975 - T:Avg	MAE	14.5278	RMSE	24.0135	MAPE	21.9016
+2025-05-09 04:14:28,993 - [*] Year 2016 load from /data/weichen/TrafficStream_data/PEMS/FastData/2016.npz
+2025-05-09 04:14:29,001 - [*] load from log/PEMS/trafficstream-42/2016/13.1147.pkl
+2025-05-09 04:14:33,362 - number of increase nodes:99, nodes after 2 hop:torch.Size([188]), total nodes this year 850
+2025-05-09 04:14:33,362 - [*] load from log/PEMS/trafficstream-42/2016/13.1147.pkl
+2025-05-09 04:14:48,077 - [*] year 2016, testing
+2025-05-09 04:14:48,454 - T:3	MAE	12.4697	RMSE	22.0254	MAPE	18.0503
+2025-05-09 04:14:49,150 - T:6	MAE	13.8826	RMSE	24.7339	MAPE	21.6867
+2025-05-09 04:14:51,111 - T:12	MAE	16.7425	RMSE	29.6197	MAPE	29.0815
+2025-05-09 04:14:51,111 - T:Avg	MAE	14.1022	RMSE	24.9669	MAPE	22.4329
+2025-05-09 04:14:51,132 - [*] Year 2017 load from /data/weichen/TrafficStream_data/PEMS/FastData/2017.npz
+2025-05-09 04:14:51,145 - [*] load from log/PEMS/trafficstream-42/2017/16.6464.pkl
+2025-05-09 04:14:55,572 - number of increase nodes:106, nodes after 2 hop:torch.Size([282]), total nodes this year 871
+2025-05-09 04:14:55,572 - [*] load from log/PEMS/trafficstream-42/2017/16.6464.pkl
+2025-05-09 04:15:10,291 - [*] year 2017, testing
+2025-05-09 04:15:10,659 - T:3	MAE	13.5981	RMSE	22.4242	MAPE	18.0503
+2025-05-09 04:15:11,382 - T:6	MAE	14.9556	RMSE	24.8571	MAPE	21.0952
+2025-05-09 04:15:13,372 - T:12	MAE	17.7028	RMSE	29.4877	MAPE	27.5509
+2025-05-09 04:15:13,373 - T:Avg	MAE	15.1683	RMSE	25.1508	MAPE	21.7841
+2025-05-09 04:15:13,375 - 
+
+
+2025-05-09 04:15:13,375 - 3   	 MAE	     12.92	     12.23	     12.46	     13.25	     12.91	     12.47	     13.60		   12.83
+2025-05-09 04:15:13,375 - 3   	RMSE	     19.83	     19.35	     20.00	     21.25	     20.99	     22.03	     22.42		   20.84
+2025-05-09 04:15:13,375 - 3   	MAPE	     16.69	     16.96	     17.25	     18.28	     18.19	     18.05	     18.05		   17.64
+2025-05-09 04:15:13,375 - 6   	 MAE	     14.04	     13.43	     13.79	     14.54	     14.32	     13.88	     14.96		   14.14
+2025-05-09 04:15:13,376 - 6   	RMSE	     21.84	     21.47	     22.51	     23.64	     23.74	     24.73	     24.86		   23.25
+2025-05-09 04:15:13,376 - 6   	MAPE	     19.28	     19.90	     20.04	     21.49	     21.21	     21.69	     21.10		   20.67
+2025-05-09 04:15:13,376 - 12  	 MAE	     16.40	     15.91	     16.56	     17.39	     17.13	     16.74	     17.70		   16.83
+2025-05-09 04:15:13,376 - 12  	RMSE	     25.89	     25.77	     27.39	     28.51	     28.77	     29.62	     29.49		   27.92
+2025-05-09 04:15:13,376 - 12  	MAPE	     24.89	     26.17	     26.02	     28.99	     27.79	     29.08	     27.55		   27.21
+2025-05-09 04:15:13,376 - Avg 	 MAE	     14.24	     13.63	     14.01	     14.80	     14.53	     14.10	     15.17		   14.35
+2025-05-09 04:15:13,376 - Avg 	RMSE	     22.13	     21.78	     22.83	     23.99	     24.01	     24.97	     25.15		   23.55
+2025-05-09 04:15:13,376 - Avg 	MAPE	     19.93	     20.61	     20.69	     22.46	     21.90	     22.43	     21.78		   21.40
+2025-05-09 04:15:13,376 - total time: 0.0000

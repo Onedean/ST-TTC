@@ -37,7 +37,7 @@ You can access the well pre-processed datasets from [[Google Drive]](https://dri
 ---
 
 To test PatchSTG w/o ST-TTC (i.e., Normal test) on different datasets, 
-First, you should make sure that **line 391** in [main.py](/home/weichen/stg_project/ST-TTC/large_scale_scenario/main.py) file contains the following:
+First, you should make sure that **line 391** in [main.py](./main.py) file contains the following:
 ```
 solver.test()
 ```
@@ -52,7 +52,7 @@ python main.py --config ./config/SD.conf
 ---
 
 To test PatchSTG w/ ST-TTC on different datasets,
-First, you should make sure that **line 391** in [main.py](/home/weichen/stg_project/ST-TTC/large_scale_scenario/main.py) file contains the following:
+First, you should make sure that **line 391** in [main.py](./main.py) file contains the following:
 ```
 solver.test_with_ttc()
 ```

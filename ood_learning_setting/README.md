@@ -31,7 +31,7 @@ python experiments/stone/main.py --device cuda:1 --dataset SD --years 2019 --mod
 ---
 
 To test STONE w/o ST-TTC (i.e., Normal test) on <b>SD</b>, 
-First, you should make sure that **line 231** in [main.py](/home/weichen/stg_project/ST-TTC/ood_learning_setting/experiments/stone/main.py) file contains the following:
+First, you should make sure that **line 231** in [main.py](./experiments/stone/main.py) file contains the following:
 ```
 engine.evaluate(args.mode)
 ```
@@ -47,7 +47,7 @@ python experiments/stone/main.py --device cuda:1 --dataset SD --years 2019 --mod
 ---
 
 To test STONE w/ ST-TTC on <b>SD</b>, 
-First, you should make sure that **line 231** in [main.py](/home/weichen/stg_project/ST-TTC/ood_learning_setting/experiments/stone/main.py) file contains the following:
+First, you should make sure that **line 231** in [main.py](./experiments/stone/main.py) file contains the following:
 ```
 engine.evaluate_with_ttc(args.mode, args.group, args.sd_lr)
 ```
