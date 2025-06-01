@@ -1,6 +1,6 @@
 # Spatio-temporal OOD Learning Setting
 
-_In this sub-scenario, we use and adapt the [code repository](https://github.com/PoorOtterBob/STONE-KDD-2024) of the **STONE** model._
+_In this sub-setting, we use and adapt the [code repository](https://github.com/PoorOtterBob/STONE-KDD-2024) of the **STONE** model._
 
 ## 1. Generating the SD and GBA sub-datasets from CA dataset
 In the experiments of our paper, we used SD dataset with years from 2019 to 2020, which were generated from CA dataset, followed by [LargeST](https://github.com/liuxu77/LargeST/blob/main). For example, you can download CA dataset from the provided [link](https://www.kaggle.com/datasets/liuxu77/largest) and please place the downloaded `archive.zip` file in the `data/ca` folder and unzip the file. 

@@ -1,4 +1,4 @@
-# Spatio-temporal OOD Learning Setting
+# Small Scale Spatio-Temporal Forecasting Scenario
 
 _In this sub-scenario, we use and adapt the [code repository](https://github.com/liuxu77/LargeST) of the **LargeST** repository._
 
