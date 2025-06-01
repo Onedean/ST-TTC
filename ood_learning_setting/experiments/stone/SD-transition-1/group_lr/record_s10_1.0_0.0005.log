@@ -1,0 +1,44 @@
+2025-05-15 01:55:51,365 - Namespace(device='cuda:3', dataset='SD', years='2019', model_name='stone', seed=10, bs=1, seq_len=12, horizon=12, input_dim=3, output_dim=1, order=0, new_node_ratio=0.2, num_val=1, epsilon=0.01, c=10, basis_num=1, KK=2, num_sample=0.01, mode='test', test_ratio=0.1, ood=1, tood=1, max_epochs=100, patience=10, alpha=0.8, beta=0.1, beta0=2, TBlocks_num=5, SBlocks_num=2, Kt=3, Ks_s=1, Ks_t=3, step_size=10, gamma=0.95, adj_type='transition', adp_adj=1, lrate=0.001, wdecay=0.0001, dropout=0.3, clip_grad_value=5, group=1.0, sd_lr=0.0005)
+2025-05-15 01:55:51,394 - Adj path: ./data/sd/sd_rn_adj.npy
+2025-05-15 01:55:55,805 - Data shape in test set years:(35136, 716, 3)
+2025-05-15 01:55:56,880 - Sample num: 7022, Batch num: 7022
+2025-05-15 01:55:57,673 - The number of parameters: 746525
+2025-05-15 01:58:13,735 - Horizon 1, Test MAE_ob: 17.5466, Test RMSE_ob: 24.2817, Test MAPE_ob: 0.1998
+2025-05-15 01:58:13,740 - Horizon 1, Test MAE_un: 18.0116, Test RMSE_un: 24.5933, Test MAPE_un: 0.1930
+2025-05-15 01:58:13,745 - Horizon 1, Test MAEall: 17.6238, Test RMSEall: 24.3334, Test MAPEall: 0.1986
+2025-05-15 01:58:13,766 - Horizon 2, Test MAE_ob: 19.2248, Test RMSE_ob: 27.4760, Test MAPE_ob: 0.2027
+2025-05-15 01:58:13,771 - Horizon 2, Test MAE_un: 19.7610, Test RMSE_un: 27.9321, Test MAPE_un: 0.2007
+2025-05-15 01:58:13,777 - Horizon 2, Test MAEall: 19.3139, Test RMSEall: 27.5517, Test MAPEall: 0.2024
+2025-05-15 01:58:13,799 - Horizon 3, Test MAE_ob: 20.3280, Test RMSE_ob: 29.7821, Test MAPE_ob: 0.2027
+2025-05-15 01:58:13,804 - Horizon 3, Test MAE_un: 21.0711, Test RMSE_un: 30.6266, Test MAPE_un: 0.2032
+2025-05-15 01:58:13,809 - Horizon 3, Test MAEall: 20.4514, Test RMSEall: 29.9224, Test MAPEall: 0.2028
+2025-05-15 01:58:13,829 - Horizon 4, Test MAE_ob: 21.6682, Test RMSE_ob: 32.1275, Test MAPE_ob: 0.2048
+2025-05-15 01:58:13,834 - Horizon 4, Test MAE_un: 22.8153, Test RMSE_un: 33.6382, Test MAPE_un: 0.2089
+2025-05-15 01:58:13,838 - Horizon 4, Test MAEall: 21.8586, Test RMSEall: 32.3783, Test MAPEall: 0.2055
+2025-05-15 01:58:13,858 - Horizon 5, Test MAE_ob: 23.6703, Test RMSE_ob: 35.4167, Test MAPE_ob: 0.2105
+2025-05-15 01:58:13,863 - Horizon 5, Test MAE_un: 25.3458, Test RMSE_un: 37.8197, Test MAPE_un: 0.2190
+2025-05-15 01:58:13,867 - Horizon 5, Test MAEall: 23.9485, Test RMSEall: 35.8157, Test MAPEall: 0.2119
+2025-05-15 01:58:13,887 - Horizon 6, Test MAE_ob: 25.7138, Test RMSE_ob: 38.3032, Test MAPE_ob: 0.2223
+2025-05-15 01:58:13,891 - Horizon 6, Test MAE_un: 27.8658, Test RMSE_un: 41.6183, Test MAPE_un: 0.2340
+2025-05-15 01:58:13,896 - Horizon 6, Test MAEall: 26.0711, Test RMSEall: 38.8537, Test MAPEall: 0.2242
+2025-05-15 01:58:13,915 - Horizon 7, Test MAE_ob: 27.1366, Test RMSE_ob: 40.2824, Test MAPE_ob: 0.2323
+2025-05-15 01:58:13,920 - Horizon 7, Test MAE_un: 29.7943, Test RMSE_un: 44.5037, Test MAPE_un: 0.2475
+2025-05-15 01:58:13,924 - Horizon 7, Test MAEall: 27.5779, Test RMSEall: 40.9833, Test MAPEall: 0.2348
+2025-05-15 01:58:13,944 - Horizon 8, Test MAE_ob: 28.6539, Test RMSE_ob: 42.2818, Test MAPE_ob: 0.2443
+2025-05-15 01:58:13,949 - Horizon 8, Test MAE_un: 31.8615, Test RMSE_un: 47.4639, Test MAPE_un: 0.2622
+2025-05-15 01:58:13,953 - Horizon 8, Test MAEall: 29.1865, Test RMSEall: 43.1423, Test MAPEall: 0.2473
+2025-05-15 01:58:13,973 - Horizon 9, Test MAE_ob: 30.7446, Test RMSE_ob: 45.0839, Test MAPE_ob: 0.2653
+2025-05-15 01:58:13,977 - Horizon 9, Test MAE_un: 34.6151, Test RMSE_un: 51.3142, Test MAPE_un: 0.2876
+2025-05-15 01:58:13,982 - Horizon 9, Test MAEall: 31.3873, Test RMSEall: 46.1184, Test MAPEall: 0.2690
+2025-05-15 01:58:14,001 - Horizon 10, Test MAE_ob: 32.5886, Test RMSE_ob: 47.4456, Test MAPE_ob: 0.2867
+2025-05-15 01:58:14,006 - Horizon 10, Test MAE_un: 37.1560, Test RMSE_un: 54.8841, Test MAPE_un: 0.3125
+2025-05-15 01:58:14,010 - Horizon 10, Test MAEall: 33.3470, Test RMSEall: 48.6807, Test MAPEall: 0.2910
+2025-05-15 01:58:14,029 - Horizon 11, Test MAE_ob: 33.8236, Test RMSE_ob: 49.0894, Test MAPE_ob: 0.3036
+2025-05-15 01:58:14,034 - Horizon 11, Test MAE_un: 39.0219, Test RMSE_un: 57.6887, Test MAPE_un: 0.3317
+2025-05-15 01:58:14,038 - Horizon 11, Test MAEall: 34.6868, Test RMSEall: 50.5173, Test MAPEall: 0.3083
+2025-05-15 01:58:14,058 - Horizon 12, Test MAE_ob: 35.4514, Test RMSE_ob: 51.0830, Test MAPE_ob: 0.3319
+2025-05-15 01:58:14,063 - Horizon 12, Test MAE_un: 41.4302, Test RMSE_un: 60.9282, Test MAPE_un: 0.3625
+2025-05-15 01:58:14,067 - Horizon 12, Test MAEall: 36.4441, Test RMSEall: 52.7177, Test MAPEall: 0.3370
+2025-05-15 01:58:14,067 - Average Test MAEall: 26.8247, Test RMSEall: 39.2512, Test MAPEall: 0.2444
+2025-05-15 01:58:14,068 - Average Test MAE_ob1: 26.3792, Test RMSE_ob: 38.5544, Test MAPE_ob: 0.2422
+2025-05-15 01:58:14,068 - Average Test MAE_un: 29.0625, Test RMSE_un: 42.7509, Test MAPE_un: 0.2552
