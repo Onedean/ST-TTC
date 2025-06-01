@@ -1,6 +1,6 @@
 # Large Scale Spatio-Temporal Forecasting Scenario
 
-_In this sub-scenario, we use and adapt the [code repository](https://github.com/PoorOtterBob/STONE-KDD-2024) of the **PatchSTG** model._
+_In this sub-scenario, we use and adapt the [code repository](https://github.com/lmissher/patchstg) of the **PatchSTG** model._
 
 
 ## Requirements
