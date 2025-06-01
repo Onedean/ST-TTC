@@ -1,0 +1,128 @@
+2025-05-07 23:38:02,861 - Namespace(device='cuda:2', dataset='KNOWAIR', fewshot=100, eval_method='norm', years='2015', seed=2018, bs=64, seq_len=12, horizon=12, input_dim=3, output_dim=1, mode='train', max_epochs=100, patience=10, model_name='sttn', adj_type='doubletransition', blocks=2, mlp_expand=2, hid_dim=32, end_dim=512, lrate=0.001, wdecay=0.0001, dropout=0.1, clip_grad_value=5)
+2025-05-07 23:38:02,862 - Adj path: /home/weichen/stg_project/LargeST/data/knowair/knowair_rn_adj.npy
+2025-05-07 23:38:03,557 - Data shape: (11688, 184, 3)
+2025-05-07 23:38:03,645 - Sample num: 6999, Batch num: 109
+2025-05-07 23:38:03,734 - Sample num: 2333, Batch num: 36
+2025-05-07 23:38:03,822 - Sample num: 2333, Batch num: 36
+2025-05-07 23:38:04,658 - The arc of model:
+STTN(
+  (t_modules): ModuleList(
+    (0-1): 2 x TemporalTransformer(
+      (layers): ModuleList(
+        (0): ModuleList(
+          (0): TemporalAttention(
+            (qkv): Linear(in_features=32, out_features=96, bias=False)
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=32, out_features=32, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (1): PreNorm(
+            (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=32, out_features=64, bias=True)
+                (1): GELU(approximate='none')
+                (2): Dropout(p=0.1, inplace=False)
+                (3): Linear(in_features=64, out_features=32, bias=True)
+                (4): Dropout(p=0.1, inplace=False)
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+  (s_modules): ModuleList(
+    (0-1): 2 x SpatialTransformer(
+      (layers): ModuleList(
+        (0): ModuleList(
+          (0): SpatialAttention(
+            (qkv): Linear(in_features=32, out_features=96, bias=False)
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=32, out_features=32, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (1): PreNorm(
+            (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=32, out_features=64, bias=True)
+                (1): GELU(approximate='none')
+                (2): Dropout(p=0.1, inplace=False)
+                (3): Linear(in_features=64, out_features=32, bias=True)
+                (4): Dropout(p=0.1, inplace=False)
+              )
+            )
+          )
+          (2): GCN(
+            (nconv): nconv()
+            (mlp): linear(
+              (mlp): Conv2d(160, 32, kernel_size=(1, 1), stride=(1, 1))
+            )
+          )
+        )
+      )
+    )
+  )
+  (bn): ModuleList(
+    (0-1): 2 x BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (start_conv): Conv2d(3, 32, kernel_size=(1, 1), stride=(1, 1))
+  (end_conv_1): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+  (end_conv_2): Conv2d(512, 12, kernel_size=(1, 1), stride=(1, 1))
+)
+2025-05-07 23:38:04,658 - Number of total parameters: 79692, tunable parameters: 79692
+2025-05-07 23:38:04,659 - The number of parameters: 79692
+2025-05-07 23:38:04,659 - Start training!
+2025-05-07 23:39:03,357 - Epoch: 001, Train Loss: 23.9645, Train RMSE: 37.7279, Train MAPE: 0.6210, Valid Loss: 19.8466, Valid RMSE: 30.6115, Valid MAPE: 0.6323, Train Time: 53.1521s/epoch, Valid Time: 5.5463s, LR: 1.0000e-03
+2025-05-07 23:39:03,363 - Val loss decrease from inf to 19.8466
+2025-05-07 23:40:01,020 - Epoch: 002, Train Loss: 22.3754, Train RMSE: 35.6558, Train MAPE: 0.5739, Valid Loss: 19.2765, Valid RMSE: 30.3230, Valid MAPE: 0.5852, Train Time: 52.0995s/epoch, Valid Time: 5.5578s, LR: 1.0000e-03
+2025-05-07 23:40:01,026 - Val loss decrease from 19.8466 to 19.2765
+2025-05-07 23:40:58,771 - Epoch: 003, Train Loss: 21.9243, Train RMSE: 35.0707, Train MAPE: 0.5551, Valid Loss: 19.1231, Valid RMSE: 30.3046, Valid MAPE: 0.6041, Train Time: 52.1318s/epoch, Valid Time: 5.6132s, LR: 1.0000e-03
+2025-05-07 23:40:58,777 - Val loss decrease from 19.2765 to 19.1231
+2025-05-07 23:41:56,627 - Epoch: 004, Train Loss: 21.6607, Train RMSE: 34.6793, Train MAPE: 0.5438, Valid Loss: 18.7899, Valid RMSE: 29.7201, Valid MAPE: 0.5863, Train Time: 52.2677s/epoch, Valid Time: 5.5823s, LR: 1.0000e-03
+2025-05-07 23:41:56,633 - Val loss decrease from 19.1231 to 18.7899
+2025-05-07 23:42:54,518 - Epoch: 005, Train Loss: 21.3715, Train RMSE: 34.2678, Train MAPE: 0.5355, Valid Loss: 19.0648, Valid RMSE: 29.2431, Valid MAPE: 0.6540, Train Time: 52.3200s/epoch, Valid Time: 5.5649s, LR: 1.0000e-03
+2025-05-07 23:43:52,766 - Epoch: 006, Train Loss: 21.2209, Train RMSE: 34.0317, Train MAPE: 0.5340, Valid Loss: 18.6453, Valid RMSE: 30.1880, Valid MAPE: 0.5340, Train Time: 52.5906s/epoch, Valid Time: 5.6572s, LR: 1.0000e-03
+2025-05-07 23:43:52,772 - Val loss decrease from 18.7899 to 18.6453
+2025-05-07 23:44:50,947 - Epoch: 007, Train Loss: 21.0010, Train RMSE: 33.6730, Train MAPE: 0.5265, Valid Loss: 18.8692, Valid RMSE: 29.1502, Valid MAPE: 0.6385, Train Time: 52.4595s/epoch, Valid Time: 5.7162s, LR: 1.0000e-03
+2025-05-07 23:45:48,952 - Epoch: 008, Train Loss: 20.8078, Train RMSE: 33.3691, Train MAPE: 0.5181, Valid Loss: 18.2642, Valid RMSE: 29.2899, Valid MAPE: 0.5371, Train Time: 52.4439s/epoch, Valid Time: 5.5604s, LR: 1.0000e-03
+2025-05-07 23:45:48,958 - Val loss decrease from 18.6453 to 18.2642
+2025-05-07 23:46:47,234 - Epoch: 009, Train Loss: 20.6894, Train RMSE: 33.1656, Train MAPE: 0.5166, Valid Loss: 18.4440, Valid RMSE: 30.1712, Valid MAPE: 0.5358, Train Time: 52.6574s/epoch, Valid Time: 5.6190s, LR: 1.0000e-03
+2025-05-07 23:47:43,111 - Epoch: 010, Train Loss: 20.5937, Train RMSE: 32.9618, Train MAPE: 0.5132, Valid Loss: 18.6616, Valid RMSE: 30.7890, Valid MAPE: 0.4949, Train Time: 51.1172s/epoch, Valid Time: 4.7590s, LR: 1.0000e-03
+2025-05-07 23:48:32,494 - Epoch: 011, Train Loss: 20.4267, Train RMSE: 32.7737, Train MAPE: 0.5054, Valid Loss: 18.3132, Valid RMSE: 29.1463, Valid MAPE: 0.5764, Train Time: 44.5538s/epoch, Valid Time: 4.8290s, LR: 1.0000e-03
+2025-05-07 23:49:21,736 - Epoch: 012, Train Loss: 20.3213, Train RMSE: 32.5835, Train MAPE: 0.5046, Valid Loss: 18.1863, Valid RMSE: 29.4412, Valid MAPE: 0.5120, Train Time: 44.5174s/epoch, Valid Time: 4.7244s, LR: 1.0000e-03
+2025-05-07 23:49:21,742 - Val loss decrease from 18.2642 to 18.1863
+2025-05-07 23:50:04,906 - Epoch: 013, Train Loss: 20.2047, Train RMSE: 32.4280, Train MAPE: 0.4995, Valid Loss: 18.1330, Valid RMSE: 29.5801, Valid MAPE: 0.5185, Train Time: 39.6421s/epoch, Valid Time: 3.5222s, LR: 1.0000e-03
+2025-05-07 23:50:04,911 - Val loss decrease from 18.1863 to 18.1330
+2025-05-07 23:50:36,179 - Epoch: 014, Train Loss: 20.1382, Train RMSE: 32.2713, Train MAPE: 0.4988, Valid Loss: 18.1687, Valid RMSE: 28.8058, Valid MAPE: 0.5761, Train Time: 28.1795s/epoch, Valid Time: 3.0876s, LR: 1.0000e-03
+2025-05-07 23:51:07,558 - Epoch: 015, Train Loss: 19.9871, Train RMSE: 32.0850, Train MAPE: 0.4932, Valid Loss: 18.4293, Valid RMSE: 28.9021, Valid MAPE: 0.6011, Train Time: 28.1735s/epoch, Valid Time: 3.2056s, LR: 1.0000e-03
+2025-05-07 23:51:38,834 - Epoch: 016, Train Loss: 19.9176, Train RMSE: 31.9795, Train MAPE: 0.4920, Valid Loss: 18.1984, Valid RMSE: 28.8372, Valid MAPE: 0.5744, Train Time: 28.1805s/epoch, Valid Time: 3.0950s, LR: 1.0000e-03
+2025-05-07 23:52:10,108 - Epoch: 017, Train Loss: 19.8062, Train RMSE: 31.8187, Train MAPE: 0.4880, Valid Loss: 18.0455, Valid RMSE: 28.5649, Valid MAPE: 0.5599, Train Time: 28.1991s/epoch, Valid Time: 3.0746s, LR: 1.0000e-03
+2025-05-07 23:52:10,113 - Val loss decrease from 18.1330 to 18.0455
+2025-05-07 23:52:41,400 - Epoch: 018, Train Loss: 19.7725, Train RMSE: 31.7317, Train MAPE: 0.4873, Valid Loss: 18.6413, Valid RMSE: 28.8297, Valid MAPE: 0.6302, Train Time: 28.2021s/epoch, Valid Time: 3.0842s, LR: 1.0000e-03
+2025-05-07 23:53:12,701 - Epoch: 019, Train Loss: 19.6637, Train RMSE: 31.5630, Train MAPE: 0.4845, Valid Loss: 18.2452, Valid RMSE: 29.5502, Valid MAPE: 0.5395, Train Time: 28.2165s/epoch, Valid Time: 3.0850s, LR: 1.0000e-03
+2025-05-07 23:53:43,968 - Epoch: 020, Train Loss: 19.5788, Train RMSE: 31.3817, Train MAPE: 0.4803, Valid Loss: 18.0589, Valid RMSE: 28.5525, Valid MAPE: 0.5744, Train Time: 28.1817s/epoch, Valid Time: 3.0844s, LR: 1.0000e-03
+2025-05-07 23:54:15,289 - Epoch: 021, Train Loss: 19.5007, Train RMSE: 31.2999, Train MAPE: 0.4790, Valid Loss: 18.1903, Valid RMSE: 29.3343, Valid MAPE: 0.5544, Train Time: 28.1861s/epoch, Valid Time: 3.1350s, LR: 1.0000e-03
+2025-05-07 23:54:46,551 - Epoch: 022, Train Loss: 19.4088, Train RMSE: 31.1351, Train MAPE: 0.4760, Valid Loss: 18.0915, Valid RMSE: 29.0773, Valid MAPE: 0.5475, Train Time: 28.1916s/epoch, Valid Time: 3.0703s, LR: 1.0000e-03
+2025-05-07 23:55:17,815 - Epoch: 023, Train Loss: 19.3236, Train RMSE: 31.0179, Train MAPE: 0.4733, Valid Loss: 18.2412, Valid RMSE: 29.3499, Valid MAPE: 0.5526, Train Time: 28.1799s/epoch, Valid Time: 3.0835s, LR: 1.0000e-03
+2025-05-07 23:55:49,118 - Epoch: 024, Train Loss: 19.2858, Train RMSE: 30.9333, Train MAPE: 0.4723, Valid Loss: 18.0516, Valid RMSE: 29.1809, Valid MAPE: 0.5397, Train Time: 28.2162s/epoch, Valid Time: 3.0870s, LR: 1.0000e-03
+2025-05-07 23:56:20,495 - Epoch: 025, Train Loss: 19.1844, Train RMSE: 30.7752, Train MAPE: 0.4701, Valid Loss: 18.1415, Valid RMSE: 29.0140, Valid MAPE: 0.5650, Train Time: 28.2215s/epoch, Valid Time: 3.1545s, LR: 1.0000e-03
+2025-05-07 23:56:51,813 - Epoch: 026, Train Loss: 19.1838, Train RMSE: 30.8190, Train MAPE: 0.4690, Valid Loss: 18.1210, Valid RMSE: 29.2686, Valid MAPE: 0.5565, Train Time: 28.1832s/epoch, Valid Time: 3.1344s, LR: 1.0000e-03
+2025-05-07 23:57:23,091 - Epoch: 027, Train Loss: 19.0585, Train RMSE: 30.5780, Train MAPE: 0.4662, Valid Loss: 18.3113, Valid RMSE: 29.5492, Valid MAPE: 0.5687, Train Time: 28.1863s/epoch, Valid Time: 3.0919s, LR: 1.0000e-03
+2025-05-07 23:57:23,091 - Early stop at epoch 27, loss = 18.045498
+2025-05-07 23:57:26,107 - --------------------------------------------------Norm Test Time Results:--------------------------------------------------
+2025-05-07 23:57:26,111 - Horizon 1, Test MAE: 8.2420, Test RMSE: 13.8207, Test MAPE: 0.2763
+2025-05-07 23:57:26,115 - Horizon 2, Test MAE: 11.1453, Test RMSE: 17.9719, Test MAPE: 0.3772
+2025-05-07 23:57:26,118 - Horizon 3, Test MAE: 12.6718, Test RMSE: 20.1045, Test MAPE: 0.4330
+2025-05-07 23:57:26,123 - Horizon 4, Test MAE: 13.6487, Test RMSE: 21.3380, Test MAPE: 0.4833
+2025-05-07 23:57:26,126 - Horizon 5, Test MAE: 14.4074, Test RMSE: 22.2305, Test MAPE: 0.5278
+2025-05-07 23:57:26,130 - Horizon 6, Test MAE: 14.9821, Test RMSE: 22.9970, Test MAPE: 0.5539
+2025-05-07 23:57:26,133 - Horizon 7, Test MAE: 15.1840, Test RMSE: 23.5051, Test MAPE: 0.5445
+2025-05-07 23:57:26,136 - Horizon 8, Test MAE: 15.4042, Test RMSE: 23.9151, Test MAPE: 0.5542
+2025-05-07 23:57:26,139 - Horizon 9, Test MAE: 16.1913, Test RMSE: 24.6961, Test MAPE: 0.6155
+2025-05-07 23:57:26,142 - Horizon 10, Test MAE: 16.7449, Test RMSE: 25.4285, Test MAPE: 0.6431
+2025-05-07 23:57:26,145 - Horizon 11, Test MAE: 16.9806, Test RMSE: 25.9575, Test MAPE: 0.6355
+2025-05-07 23:57:26,149 - Horizon 12, Test MAE: 17.3139, Test RMSE: 26.3326, Test MAPE: 0.6541
+2025-05-07 23:57:26,149 - Average Test MAE: 14.4097, Test RMSE: 22.3581, Test MAPE: 0.5249
+2025-05-07 23:57:26,149 - Norm Test Time: 2.9430s

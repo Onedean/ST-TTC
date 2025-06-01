@@ -1,0 +1,98 @@
+2023-11-30 11:56:32,775 - Namespace(device='cuda:2', dataset='METRLA', fewshot=100, prompt=False, years='2012', seed=2021, bs=64, seq_len=12, horizon=12, input_dim=3, output_dim=1, mode='train', max_epochs=100, patience=10, model_name='stnorm', tnorm_bool=True, snorm_bool=True, channels=32, kernel_size=2, blocks=4, layers=2, lrate=0.001, wdecay=0.0001, dropout=0.1, clip_grad_value=5)
+2023-11-30 11:56:33,016 - Data shape: (34272, 207, 3)
+2023-11-30 11:56:33,253 - Sample num: 23974, Batch num: 374
+2023-11-30 11:56:33,488 - Sample num: 3425, Batch num: 53
+2023-11-30 11:56:33,726 - Sample num: 6850, Batch num: 107
+2023-11-30 11:56:35,481 - The arc of model:
+STNORM(
+  (filter_convs): ModuleList(
+    (0): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (1): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+    (2): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (3): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+    (4): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (5): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+    (6): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (7): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+  )
+  (gate_convs): ModuleList(
+    (0): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (1): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+    (2): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (3): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+    (4): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (5): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+    (6): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1))
+    (7): Conv2d(96, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+  )
+  (residual_convs): ModuleList(
+    (0-7): 8 x Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (skip_convs): ModuleList(
+    (0-7): 8 x Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (sn): ModuleList(
+    (0-7): 8 x SNorm()
+  )
+  (tn): ModuleList(
+    (0-7): 8 x TNorm()
+  )
+  (start_conv): Conv2d(3, 32, kernel_size=(1, 1), stride=(1, 1))
+  (end_conv_1): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))
+  (end_conv_2): Conv2d(32, 12, kernel_size=(1, 1), stride=(1, 1))
+)
+2023-11-30 11:56:35,482 - The number of parameters: 223788
+2023-11-30 11:56:35,482 - Start training!
+2023-11-30 11:57:32,163 - Epoch: 001, Train Loss: 3.8964, Train RMSE: 7.5056, Train MAPE: 0.1099, Valid Loss: 3.1998, Valid RMSE: 6.6665, Valid MAPE: 0.0955, Train Time: 54.4128s/epoch, Valid Time: 2.2680s, LR: 1.0000e-03
+2023-11-30 11:57:32,172 - Val loss decrease from inf to 3.1998
+2023-11-30 11:58:24,344 - Epoch: 002, Train Loss: 3.2554, Train RMSE: 6.5844, Train MAPE: 0.0915, Valid Loss: 3.0410, Valid RMSE: 6.2818, Valid MAPE: 0.0895, Train Time: 50.0333s/epoch, Valid Time: 2.1389s, LR: 1.0000e-03
+2023-11-30 11:58:24,357 - Val loss decrease from 3.1998 to 3.0410
+2023-11-30 11:59:24,196 - Epoch: 003, Train Loss: 3.1224, Train RMSE: 6.3042, Train MAPE: 0.0865, Valid Loss: 3.0225, Valid RMSE: 6.1422, Valid MAPE: 0.0869, Train Time: 57.6078s/epoch, Valid Time: 2.2310s, LR: 1.0000e-03
+2023-11-30 11:59:24,207 - Val loss decrease from 3.0410 to 3.0225
+2023-11-30 12:00:25,336 - Epoch: 004, Train Loss: 3.0562, Train RMSE: 6.1984, Train MAPE: 0.0842, Valid Loss: 3.0026, Valid RMSE: 6.2056, Valid MAPE: 0.0900, Train Time: 58.7862s/epoch, Valid Time: 2.3419s, LR: 1.0000e-03
+2023-11-30 12:00:25,344 - Val loss decrease from 3.0225 to 3.0026
+2023-11-30 12:01:27,380 - Epoch: 005, Train Loss: 3.0229, Train RMSE: 6.1409, Train MAPE: 0.0831, Valid Loss: 2.9555, Valid RMSE: 6.1670, Valid MAPE: 0.0840, Train Time: 59.6119s/epoch, Valid Time: 2.4241s, LR: 1.0000e-03
+2023-11-30 12:01:27,391 - Val loss decrease from 3.0026 to 2.9555
+2023-11-30 12:02:21,913 - Epoch: 006, Train Loss: 2.9877, Train RMSE: 6.0814, Train MAPE: 0.0819, Valid Loss: 2.9771, Valid RMSE: 6.1531, Valid MAPE: 0.0836, Train Time: 52.3697s/epoch, Valid Time: 2.1528s, LR: 1.0000e-03
+2023-11-30 12:03:16,688 - Epoch: 007, Train Loss: 2.9735, Train RMSE: 6.0543, Train MAPE: 0.0813, Valid Loss: 2.9151, Valid RMSE: 6.0964, Valid MAPE: 0.0808, Train Time: 52.5322s/epoch, Valid Time: 2.2421s, LR: 1.0000e-03
+2023-11-30 12:03:16,696 - Val loss decrease from 2.9555 to 2.9151
+2023-11-30 12:04:17,061 - Epoch: 008, Train Loss: 2.9499, Train RMSE: 6.0124, Train MAPE: 0.0806, Valid Loss: 2.9238, Valid RMSE: 6.1406, Valid MAPE: 0.0839, Train Time: 57.9203s/epoch, Valid Time: 2.4441s, LR: 1.0000e-03
+2023-11-30 12:05:17,964 - Epoch: 009, Train Loss: 2.9269, Train RMSE: 5.9639, Train MAPE: 0.0797, Valid Loss: 2.8934, Valid RMSE: 6.0689, Valid MAPE: 0.0819, Train Time: 58.5826s/epoch, Valid Time: 2.3199s, LR: 1.0000e-03
+2023-11-30 12:05:17,972 - Val loss decrease from 2.9151 to 2.8934
+2023-11-30 12:06:15,159 - Epoch: 010, Train Loss: 2.9112, Train RMSE: 5.9334, Train MAPE: 0.0793, Valid Loss: 2.9081, Valid RMSE: 6.1422, Valid MAPE: 0.0814, Train Time: 54.7961s/epoch, Valid Time: 2.3906s, LR: 1.0000e-03
+2023-11-30 12:07:12,380 - Epoch: 011, Train Loss: 2.8969, Train RMSE: 5.9010, Train MAPE: 0.0788, Valid Loss: 2.9131, Valid RMSE: 6.1039, Valid MAPE: 0.0837, Train Time: 54.9785s/epoch, Valid Time: 2.2426s, LR: 1.0000e-03
+2023-11-30 12:08:08,092 - Epoch: 012, Train Loss: 2.8845, Train RMSE: 5.8767, Train MAPE: 0.0784, Valid Loss: 2.8898, Valid RMSE: 6.0659, Valid MAPE: 0.0814, Train Time: 53.4469s/epoch, Valid Time: 2.2647s, LR: 1.0000e-03
+2023-11-30 12:08:08,102 - Val loss decrease from 2.8934 to 2.8898
+2023-11-30 12:09:07,411 - Epoch: 013, Train Loss: 2.8627, Train RMSE: 5.8265, Train MAPE: 0.0776, Valid Loss: 2.9193, Valid RMSE: 6.0596, Valid MAPE: 0.0828, Train Time: 56.9619s/epoch, Valid Time: 2.3467s, LR: 1.0000e-03
+2023-11-30 12:10:06,522 - Epoch: 014, Train Loss: 2.8530, Train RMSE: 5.8061, Train MAPE: 0.0773, Valid Loss: 2.9196, Valid RMSE: 6.1247, Valid MAPE: 0.0843, Train Time: 56.7182s/epoch, Valid Time: 2.3918s, LR: 1.0000e-03
+2023-11-30 12:11:08,699 - Epoch: 015, Train Loss: 2.8381, Train RMSE: 5.7672, Train MAPE: 0.0767, Valid Loss: 2.8986, Valid RMSE: 6.0921, Valid MAPE: 0.0846, Train Time: 59.8447s/epoch, Valid Time: 2.3320s, LR: 1.0000e-03
+2023-11-30 12:12:06,766 - Epoch: 016, Train Loss: 2.8277, Train RMSE: 5.7445, Train MAPE: 0.0764, Valid Loss: 2.9068, Valid RMSE: 6.1674, Valid MAPE: 0.0810, Train Time: 55.8215s/epoch, Valid Time: 2.2457s, LR: 1.0000e-03
+2023-11-30 12:13:02,247 - Epoch: 017, Train Loss: 2.8136, Train RMSE: 5.7104, Train MAPE: 0.0759, Valid Loss: 2.9019, Valid RMSE: 6.1142, Valid MAPE: 0.0831, Train Time: 53.3471s/epoch, Valid Time: 2.1337s, LR: 1.0000e-03
+2023-11-30 12:13:57,902 - Epoch: 018, Train Loss: 2.8006, Train RMSE: 5.6784, Train MAPE: 0.0754, Valid Loss: 2.9259, Valid RMSE: 6.1668, Valid MAPE: 0.0824, Train Time: 53.2386s/epoch, Valid Time: 2.4158s, LR: 1.0000e-03
+2023-11-30 12:14:59,725 - Epoch: 019, Train Loss: 2.7887, Train RMSE: 5.6483, Train MAPE: 0.0750, Valid Loss: 2.9007, Valid RMSE: 6.0597, Valid MAPE: 0.0807, Train Time: 59.3921s/epoch, Valid Time: 2.4302s, LR: 1.0000e-03
+2023-11-30 12:16:01,709 - Epoch: 020, Train Loss: 2.7795, Train RMSE: 5.6248, Train MAPE: 0.0746, Valid Loss: 2.8748, Valid RMSE: 6.0708, Valid MAPE: 0.0827, Train Time: 59.5156s/epoch, Valid Time: 2.4685s, LR: 1.0000e-03
+2023-11-30 12:16:01,717 - Val loss decrease from 2.8898 to 2.8748
+2023-11-30 12:16:59,916 - Epoch: 021, Train Loss: 2.7622, Train RMSE: 5.5796, Train MAPE: 0.0740, Valid Loss: 2.9014, Valid RMSE: 6.1240, Valid MAPE: 0.0828, Train Time: 56.0396s/epoch, Valid Time: 2.1588s, LR: 1.0000e-03
+2023-11-30 12:17:54,074 - Epoch: 022, Train Loss: 2.7597, Train RMSE: 5.5716, Train MAPE: 0.0739, Valid Loss: 2.9097, Valid RMSE: 6.1464, Valid MAPE: 0.0821, Train Time: 51.9278s/epoch, Valid Time: 2.2300s, LR: 1.0000e-03
+2023-11-30 12:18:51,220 - Epoch: 023, Train Loss: 2.7527, Train RMSE: 5.5537, Train MAPE: 0.0736, Valid Loss: 2.9039, Valid RMSE: 6.1335, Valid MAPE: 0.0822, Train Time: 54.7253s/epoch, Valid Time: 2.4197s, LR: 1.0000e-03
+2023-11-30 12:19:52,816 - Epoch: 024, Train Loss: 2.7379, Train RMSE: 5.5111, Train MAPE: 0.0730, Valid Loss: 2.8993, Valid RMSE: 6.1403, Valid MAPE: 0.0815, Train Time: 59.1978s/epoch, Valid Time: 2.3985s, LR: 1.0000e-03
+2023-11-30 12:20:53,018 - Epoch: 025, Train Loss: 2.7302, Train RMSE: 5.4893, Train MAPE: 0.0728, Valid Loss: 2.8801, Valid RMSE: 6.1048, Valid MAPE: 0.0815, Train Time: 57.8638s/epoch, Valid Time: 2.3377s, LR: 1.0000e-03
+2023-11-30 12:21:52,654 - Epoch: 026, Train Loss: 2.7166, Train RMSE: 5.4592, Train MAPE: 0.0723, Valid Loss: 2.8766, Valid RMSE: 6.0764, Valid MAPE: 0.0818, Train Time: 57.4048s/epoch, Valid Time: 2.2311s, LR: 1.0000e-03
+2023-11-30 12:22:48,403 - Epoch: 027, Train Loss: 2.7078, Train RMSE: 5.4344, Train MAPE: 0.0720, Valid Loss: 2.9190, Valid RMSE: 6.1508, Valid MAPE: 0.0821, Train Time: 53.5346s/epoch, Valid Time: 2.2136s, LR: 1.0000e-03
+2023-11-30 12:23:44,542 - Epoch: 028, Train Loss: 2.7069, Train RMSE: 5.4254, Train MAPE: 0.0719, Valid Loss: 2.9002, Valid RMSE: 6.1604, Valid MAPE: 0.0825, Train Time: 53.7616s/epoch, Valid Time: 2.3767s, LR: 1.0000e-03
+2023-11-30 12:24:44,023 - Epoch: 029, Train Loss: 2.6954, Train RMSE: 5.3953, Train MAPE: 0.0715, Valid Loss: 2.8843, Valid RMSE: 6.1096, Valid MAPE: 0.0831, Train Time: 57.0514s/epoch, Valid Time: 2.4300s, LR: 1.0000e-03
+2023-11-30 12:25:45,384 - Epoch: 030, Train Loss: 2.6893, Train RMSE: 5.3775, Train MAPE: 0.0713, Valid Loss: 2.9210, Valid RMSE: 6.1866, Valid MAPE: 0.0820, Train Time: 58.8880s/epoch, Valid Time: 2.4723s, LR: 1.0000e-03
+2023-11-30 12:25:45,384 - Early stop at epoch 30, loss = 2.874844
+2023-11-30 12:25:50,390 - Horizon 1, Test MAE: 2.3131, Test RMSE: 4.0701, Test MAPE: 0.0573
+2023-11-30 12:25:50,397 - Horizon 2, Test MAE: 2.6070, Test RMSE: 4.9338, Test MAPE: 0.0675
+2023-11-30 12:25:50,404 - Horizon 3, Test MAE: 2.8086, Test RMSE: 5.5089, Test MAPE: 0.0753
+2023-11-30 12:25:50,411 - Horizon 4, Test MAE: 2.9608, Test RMSE: 5.9497, Test MAPE: 0.0818
+2023-11-30 12:25:50,418 - Horizon 5, Test MAE: 3.0804, Test RMSE: 6.2874, Test MAPE: 0.0869
+2023-11-30 12:25:50,425 - Horizon 6, Test MAE: 3.1780, Test RMSE: 6.5826, Test MAPE: 0.0906
+2023-11-30 12:25:50,431 - Horizon 7, Test MAE: 3.2618, Test RMSE: 6.8140, Test MAPE: 0.0937
+2023-11-30 12:25:50,438 - Horizon 8, Test MAE: 3.3307, Test RMSE: 7.0074, Test MAPE: 0.0967
+2023-11-30 12:25:50,445 - Horizon 9, Test MAE: 3.3979, Test RMSE: 7.1649, Test MAPE: 0.0996
+2023-11-30 12:25:50,452 - Horizon 10, Test MAE: 3.4535, Test RMSE: 7.3038, Test MAPE: 0.1016
+2023-11-30 12:25:50,459 - Horizon 11, Test MAE: 3.5062, Test RMSE: 7.4138, Test MAPE: 0.1040
+2023-11-30 12:25:50,465 - Horizon 12, Test MAE: 3.5639, Test RMSE: 7.5445, Test MAPE: 0.1061
+2023-11-30 12:25:50,466 - Average Test MAE: 3.1218, Test RMSE: 6.3817, Test MAPE: 0.0884
