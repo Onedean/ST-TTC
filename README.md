@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h2><b><big>(NeurIPS'25 Spotlight) - 🌠 ST-TTC</big> <br><br> Learning with Calibration: Exploring <u>T</u>est-<u>T</u>ime <u>C</u>omputing of <u>S</u>patio-<u>T</u>emporal Forecasting </b></h2>
+  <h2><b><big>(NeurIPS'25 Spotlight) - 🌠 ST-TTC</big> <br><br> Learning with Calibration: Exploring <br> <u>T</u>est-<u>T</u>ime <u>C</u>omputing of <u>S</u>patio-<u>T</u>emporal Forecasting </b></h2>
 </div>
 
 <div align="center">
