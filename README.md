@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h2><b><big>(NeurIPS'25 Spotlight) - 🌠</big> <br><br> Learning with Calibration: Exploring <u>T</u>est-<u>T</u>ime <u>C</u>omputing of <u>S</u>patio-<u>T</u>emporal Forecasting </b></h2>
+  <h2><b><big>(NeurIPS'25 Spotlight) - 🌠 ST-TTC</big> <br><br> Learning with Calibration: Exploring <u>T</u>est-<u>T</u>ime <u>C</u>omputing of <u>S</u>patio-<u>T</u>emporal Forecasting </b></h2>
 </div>
 
 <div align="center">
@@ -38,7 +38,7 @@
 
 🚩 **News** (Feb. 2025): EAC's code, data, weights, and training logs are fully open source! Try to improve on this! 😊 -->
 
-🚩 **News** (Sep. 2025): ST-TTC has been accpeted by ICLR 2025! ✅
+🚩 **News** (Sep. 2025): ST-TTC has been accpeted by NeurIPS 2025 with Spotlight! ✅
 
 
 
