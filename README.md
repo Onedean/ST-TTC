@@ -33,7 +33,7 @@
 ## Updates/News:
 
 
-🚩 **News** (Sep. 2025): EAC's code, training details, and inference details are fully open source! Try to improve on this! 😊
+🚩 **News** (Sep. 2025): ST-TTC's code, training details, and inference details are fully open source! Try to improve on this! 😊
 
 🚩 **News** (Sep. 2025): ST-TTC has been accpeted by NeurIPS 2025 with Spotlight! ✅
 
