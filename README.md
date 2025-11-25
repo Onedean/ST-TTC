@@ -18,7 +18,7 @@
 > ⭐ ST-TTC is a method for exploring the **real-time calibration** of models in the face of open environment **dynamic spatio-temporal distribution shifts** during the **Test-Time Computing Phase**.
 
 **[<a href="https://arxiv.org/pdf/2506.00635">Paper Page</a>]**
-<!-- **[<a href="./asset/EAC_presentation.pdf">Presentation Slide</a>]** -->
+**[<a href="./asset/TTC_presentation.pdf">Presentation Slide</a>]**
 
 <!-- By [Citymind LAB](https://citymind.top) <img src="./asset/citymind.png" alt="图标" style="width: 108px; height: 20px;">, [HKUST(GZ)](https://www.hkust-gz.edu.cn/) <img src="./asset/hkust-gz.png" alt="图标" style="width: 20px; height: 20px;">. -->
 
